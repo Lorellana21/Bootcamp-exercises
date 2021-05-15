@@ -6,8 +6,10 @@ function multiplication (a, b){
     const result = a * b;
     return result;
   }
-  const multiplicationResult = multiplication (5, 5);
-  console.log(multiplicationResult)
+
+const multiplicationResult = multiplication (8, 5);
+  
+
 
 
 
