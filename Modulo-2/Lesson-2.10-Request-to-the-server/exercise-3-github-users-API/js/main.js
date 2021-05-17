@@ -11,3 +11,25 @@ Para ello vamos a hacer lo siguiente:
 4. En el último then pintar en nuestra web el nombre de todos los repositorios de la organización en una lista (propiedad name de cada objeto repositorio).
 
 */
+
+const btnElement = document.querySelector (".js-btn");
+
+function getInfo(){
+    const inputElement = document.querySelector (".js-input");
+    const orgName = inputElement.value;
+    fetch ("https://api.github.com/orgs/"+ {orgName})
+    .then((response) => response.json())
+    .then((repo) => {
+        const repoUrl = repo.repos_url;
+        return fetch ("https://api.github.com/orgs/" + {orgName} + "/repos")
+    })
+    .then(repoResponse => repoResponse.json())
+    .then(repoData => {
+        const list = document.querySelector (".js-list");
+        list.innerHTML = repoData.name;
+    })
+
+}
+
+
+btnElement.addEventListener ("click", getInfo);
