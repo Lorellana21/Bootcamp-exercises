@@ -1,24 +1,38 @@
 `use strict`;
 
-/*Ahora vamos a explorar un nuevo API: el API de usuarios de GitHub. La URL de este API es https://api.github.com/users/{username}, donde {username} es el nombre del usuario en GitHub. Por ejemplo, aquí tenéis la URL para obtener información del usuario de Isra https://api.github.com/users/gootyfer. Si ponéis esta URL en una nueva pestaña del navegador podréis observar qué datos nos devuelve el API.
+/*Eexplorar la parte del API para acceder a la info sobre organizaciones.
+La URL de este API es https://api.github.com/orgs/{orgname}, donde {orgname} es el nombre de la organización en GitHub. 
+Por ejemplo, aquí tenéis la URL para obtener información de la organización Adalab https://api.github.com/orgs/Adalab. 
 
-Vamos a crear una página en la que haya un input de texto y un botón de buscar. El usuario escribirá en el input un nombre de usuario de GitHub. Prepararemos una función que se ejecute cuando se pulse el botón buscar y que contenga una petición al API para obtener información de ese usuario y así mostrarla en nuestra página:
-nombre
-número de repositorios
-avatar (imagen)
+Hay que ostrar en una web el listado completo de los repositorios de una organización que hay creados en GitHub. Por ejemplo, para Adalab, el resultado final debería ser similar a este:
+
+Para ello vamos a hacer lo siguiente:
+1. Preparar un input  con un botón para que la usuaria introduzca la organización.
+2. Cuando la usuaria pulse el botón buscar acceder a la información de la organización como primera petición al servidor.
+3. Recoger la información de la URL donde consultar la información de los repositorios de la organización en la respuesta del servidor (en la propiedad repos_url) y hacer una nueva petición a esa URL.
+4. En el último then pintar en nuestra web el nombre de todos los repositorios de la organización en una lista (propiedad name de cada objeto repositorio).
 
 */
 
-function getDogImage() {
-  fetch("https://dog.ceo/api/breeds/image/random")
-    .then(response => response.json())
-    .then(data => {
-      const img = document.querySelector("img");
-      img.src = data.message;
-      img.alt = "Un chihuahua";
-    });
-}
-const btn = document.querySelector(".js-chihuahua");
-btn.addEventListener("click", getDogImage);
+function getInfo() {
+  const inputElement = document.querySelector(".js-input");
+  const orgName = inputElement.value;
+  fetch(`https://api.github.com/orgs/${orgName}`)
+    .then((orgResponse) => orgResponse.json())
+    .then((orgData) => {
+      // Obtenemos url especifica de los repos de Adalab
+      const repoUrl = orgData.repos_url;
+      console.log(repoUrl);
 
-//{"message":"https:\/\/images.dog.ceo\/breeds\/chihuahua\/n02106550_9432.jpg","status":"success"}
+  //hasta aqui esta bien pero aun asi no funciona
+
+  fetch(`https://api.github.com/orgs/` + repos[0]);
+    .then((repoResponse) => repoResponse.json())
+    .then((repoData) => {
+      const list = document.querySelector(".js-list");
+      list.innerHTML = repoData.name;
+    });
+})
+
+const btnElement = document.querySelector(".js-btn");
+btnElement.addEventListener("click", getInfo);
