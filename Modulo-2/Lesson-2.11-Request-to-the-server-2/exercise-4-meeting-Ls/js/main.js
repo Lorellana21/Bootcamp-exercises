@@ -17,3 +17,4 @@ inputElement.addEventListener("key up", paintHTML);
 
 localStorage.setItem(inputIntroduced);
 const name = localStorage.getItem(inputIntroduced);
+
