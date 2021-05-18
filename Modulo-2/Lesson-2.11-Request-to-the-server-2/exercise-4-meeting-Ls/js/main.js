@@ -6,15 +6,16 @@ Al recargar la página tenemos que consultar localStorage y, si hay algún nombr
 
 */
 const inputElement = document.querySelector(".js-input");
-inputIntroduced = inputElement.value;
 const pa = document.querySelector(".js-pa");
 
 function paintHTML() {
+  const inputIntroduced = inputElement.value;
   pa.innerHTML = inputIntroduced;
+  localStorage.setItem("name", inputIntroduced);
 }
 
-inputElement.addEventListener("key up", paintHTML);
+inputElement.addEventListener("keyup", paintHTML);
 
-localStorage.setItem(inputIntroduced);
-const name = localStorage.getItem(inputIntroduced);
+const name = localStorage.getItem("name");
 
+pa.innerHTML = name;
