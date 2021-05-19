@@ -8,6 +8,7 @@ Nota: Usa imágenes que encuentres por Internet.
 */
 
 const nameInput = document.querySelector("#cities");
+const image = document.querySelector(".js-image");
 
 console.log(nameInput.value); // Pintará el valor actual, 'madrid'
 
@@ -20,4 +21,6 @@ De esta forma no modificaremos los estilos previamente asignados
 Si la propiedad CSS tiene un guión (background-color) lo convertiremos a camelcase
 backgroundColor
 */
-nameInput.style.backgroundImage = url("./images/madrid.jpg");
+image.src = "./images/madrid.jpg";
+
+crear una funcion
