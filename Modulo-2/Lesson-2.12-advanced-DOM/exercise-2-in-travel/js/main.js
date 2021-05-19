@@ -23,4 +23,4 @@ backgroundColor
 */
 image.src = "./images/madrid.jpg";
 
-crear una funcion
+//crear una funcion

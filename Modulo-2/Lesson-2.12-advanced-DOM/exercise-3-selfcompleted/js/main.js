@@ -1,39 +1,71 @@
 `use strict`;
 
-/*Vamos a crear nuestro propio autocompletado de formularios. Para ello vamos a crear un formulario con tres campos:
+/*Crear un formulario con tres campos:
 Nombre
 Apellidos
 Teléfono
-Por otro lado, en JavaScript tendremos un array de 3 objetos con esa estructura. Es decir, un listado 3 objetos, cada uno con nombre apellidos y teléfono. Pediremos a la usuaria que elija uno de esos 3 con un select con el nombre. Al seleccionarlo se rellenará el formulario automáticamente.
-
+En JavaScript tendremos un array de 3 objetos con esa estructura (es decir, un listado 3 objetos, cada uno con nombre apellidos y teléfono). 
+La usuaria debe elegir uno de esos 3 con un select con el nombre. 
+Al seleccionarlo se rellenará el formulario automáticamente.
 */
-const form = [
+
+// listado de personas para llenar los OPTION  del select
+const persons = [
   {
-    name: "Lorena",
-    surname: "Orellana",
-    phone: "666 555 888",
+    id: "123a",
+    nombre: "Julia",
+    apellido: "ruiz",
+    telefono: 12356,
   },
   {
-    name: "Silvia",
-    surname: "España",
-    phone: "666 111 222",
+    id: "123b",
+    nombre: "lorena",
+    apellido: "garcias",
+    telefono: 123658,
   },
   {
-    name: "Dayana",
-    surname: "Romero",
-    phone: "666 555 333",
+    id: "123c",
+    nombre: "lucia",
+    apellido: "perez",
+    telefono: 22558,
   },
 ];
 
-console.log(form[0].name);
+const selectElement = document.querySelector(".js-select");
+const inputName = document.querySelector(".js-name");
+const inputLast = document.querySelector(".js-lastName");
+const inputPhone = document.querySelector(".js-phone");
 
-const input1 = document.querySelector(".js-input1");
-console.log(input1);
+// funcion para llenar, crear los elementos OPTION del select
+function paintOption() {
+  for (const person of persons) {
+    const optionEle = document.createElement("option");
+    selectElement.appendChild(optionEle);
+    const textElem = document.createTextNode(person.nombre);
+    optionEle.appendChild(textElem);
+    //optionEle.value = person.nombre;
+    optionEle.setAttribute("value", person.nombre);
+    optionEle.dataset.idPerson = person.id;
+  }
+}
+paintOption();
 
-const mother = input1.parentElement;
-
-console.log(
-  `La madre de nuestro elemento es un <${mother.nodeName.toLowerCase()}> y tiene la clase .${
-    mother.className
-  }`
-);
+//funcion manejadora del evento, al cambiar el option del select
+function handlerSelect(ev) {
+  const selectValue = ev.target.value;
+  const dataset = ev;
+  const selectDatasetId = ev.target[0].dataset.idPerson;
+  //const selectValue = selectElement.value;
+  console.log(selectValue);
+  console.log(selectDatasetId);
+  console.log(dataset);
+  //inputName.setAttribute("value",selectValue);
+  for (const person of persons) {
+    if (selectValue === person.nombre) {
+      inputName.value = selectValue;
+      inputLast.value = person.apellido;
+      inputPhone.value = person.telefono;
+    }
+  }
+}
+selectElement.addEventListener("change", handlerSelect);
