@@ -1,6 +1,6 @@
 `use strict`;
 
-/*a) En nuestra aplicación de gestión de usuarios, nos ha llegado una incidencia asociada al PIN 5232. ¿Podrías encontrar el usuario que corresponde a ese PIN para poder contactarle? Usa el método find para conseguirlo.*/
+/*a) Incidencia asociada al PIN 5232: encontrar el usuario que corresponde a ese PIN. Usa el método find.*/
 
 const users = [
   { name: "María", isPremium: false, pin: 2389 },
@@ -10,4 +10,17 @@ const users = [
   { name: "Inmaculada", isPremium: false, pin: 8998 },
 ];
 
-/*b) Resulta que el usuario se ha dado de baja por la incidencia :( ¿Podrías borrarlo del array de usuarios? Usa el método findIndex para encontrar su posición y bórralo usando splice.*/
+//const incidence = users.find((user) => user.pin === 5232);
+
+/*b) Usa el método findIndex para encontrar su posición y bórralo usando splice.*/
+
+const incidence = users.findIndex((user) => user.pin === 5232);
+const usersNew = users.splice(3, 1);
+//console.log(usersNew); //solo me aparece Rocio
+
+users.splice(
+  users.findIndex((user) => user.pin === 5232),
+  1
+);
+
+console.log(users);
