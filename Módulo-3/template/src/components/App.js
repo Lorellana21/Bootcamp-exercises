@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import "../stylesheets/App.css";
 
-//Asignar nombres a las variables
-//Partiendo del ejercicio anterior vamos a hacer que el return de render() devuelva una sola variable, para ello, vamos a extraer a variables cada una de las "etiquetas" del contenido del return del ejercicio original. Por ejemplo, una variable para la cabecera, y otra para el párrafo. Haremos que los nombres de nuestras variables sean descriptivos y, cuando sea posible, cortos.
-
 class App extends Component {
   render() {
-    const classOfH1 = "App-body";
     const appParagraph = (
       <p className="App-intro">
         Lorem ipsum dolor sit amet consectetur adipiscing elit mauris dui porta
@@ -21,13 +17,12 @@ class App extends Component {
       </p>
     );
     const appBody = (
-      <div className={classOfH1}>
+      <div className="App-body">
         <h1 className="App-title">Alex Guerrero</h1>
         <h2>Lunes 26 de junio de 2017</h2>
-        {appParagraph}
       </div>
     );
-    return appBody;
+    return [appBody, appParagraph];
   }
 }
 
