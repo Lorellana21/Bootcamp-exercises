@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+import "../stylesheets/App.css";
 
 class App extends React.Component {
   render() {
@@ -19,24 +20,18 @@ class App extends React.Component {
         age: 22,
       },
     ];
-
-    const filterStudents = students.filter((student) => {
-      return student.promo === "A";
-    });
     return (
       <div>
         <h1>Pintar listados con React:</h1>
 
-        {filterStudents.map((student) => {
-          // cada return retorna un li
+        {students.map((student) => {
+          const newStudents = students.filter((student) => students.promo);
           return (
-            <ul>
-              <li>
-                <h2>Nombre: {student.name}</h2>
-                <p>Promo: {student.promo}</p>
-                <p>Edad: {student.age}</p>
-              </li>
-            </ul>
+            <li>
+              <h2>Nombre: {student.name}</h2>
+              <p>Edad: {student.age}</p>
+              <p>Promo: {student.promo}</p>
+            </li>
           );
           // el map retorna un array de li, es decir, un listado de HTML
         })}
