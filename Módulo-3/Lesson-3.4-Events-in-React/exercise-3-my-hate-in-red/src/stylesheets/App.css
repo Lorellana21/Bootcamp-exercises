@@ -1,0 +1,18 @@
+.foodInput {
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.foodLabel {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodLabelOnion {
+  height: 100vh;
+  background-color: red;
+}
