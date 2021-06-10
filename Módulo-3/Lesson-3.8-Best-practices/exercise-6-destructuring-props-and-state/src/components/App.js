@@ -27,9 +27,10 @@ class MovieForm extends React.Component {
   }
 
   render() {
-    const name = this.state.name;
-    const textarea = this.state.textarea;
-    const select = this.state.select;
+    // const name = this.state.name;
+    // const textarea = this.state.textarea;
+    // const select = this.state.select;
+    const { name, textarea, select } = this.state;
     return (
       <>
         <form>
@@ -60,9 +61,9 @@ class MovieForm extends React.Component {
           </label>
         </form>
         <article>
-          <p>Tu peli favorita es: {this.state.name}</p>
-          <p>Trata sobre: {this.state.textarea}</p>
-          <p>Idioma: {this.state.select}</p>
+          <p>Tu peli favorita es: {name}</p>
+          <p>Trata sobre: {textarea}</p>
+          <p>Idioma: {select}</p>
         </article>
       </>
     );
