@@ -6,7 +6,7 @@ h1{
     font-size: 24px;
     color: black; 
 }
-p{
+p,li{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
     color: #757575;
