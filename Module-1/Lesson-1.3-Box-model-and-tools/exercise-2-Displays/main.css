@@ -1,0 +1,29 @@
+body {
+  margin: 10px 30px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+div{
+  size: 100%;
+  background-color: aqua;
+}
+
+.div1{
+  display: block;
+}
+
+.div2{
+  display: inline;
+}
+
+.div3{
+  display: none;
+}
+
+
+
+
+
