@@ -1,0 +1,22 @@
+
+.title {
+  font-size: 72px;
+}
+
+.header .menu {
+  text-transform: uppercase;
+  background: pink;
+}
+
+.menu {
+  background-color: red;
+}
+
+.content {
+  color: blue;
+  background-color: lightblue;
+}
+
+.copy {
+  font-size: 10px;
+}
