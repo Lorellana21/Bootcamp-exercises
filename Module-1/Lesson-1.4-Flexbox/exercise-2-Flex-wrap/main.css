@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+
+div{
+  height: 500px;
+  width: 500px;
+  border: solid blue 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  border-bottom: solid blue 2px;
+}

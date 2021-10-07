@@ -1,0 +1,26 @@
+.body {
+  margin: 100px;
+}
+
+.hija {
+  border: solid 15px black;
+  width: 100vw;
+}
+
+.mama {
+  border: solid 5px red;
+  width: 100%;
+  /*  padding: 50px; */
+}
+
+.title {
+  font-size: 48px;
+  width: 75%;
+  max-width: 400px;
+}
+
+.panda {
+  margin: 10px;
+  width: calc(50% - 20px);
+  max-width: 500px;
+}
