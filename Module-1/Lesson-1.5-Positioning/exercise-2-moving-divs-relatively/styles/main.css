@@ -1,32 +1,29 @@
-.div1 {
+.div{
   width: 300px;
   height: 300px;
-  background-color: brown;
   margin: 40px;
   padding: 30px;
-  position: relative;
-  left: 100px;
-  top: 50px;
   text-align: center;
+  position: relative;
+}
+/*la position Relative no saca a un elemento de su flujo de caja, 
+  sino que éste se mueve en función de la posición que tiene, es decir,
+  no libera su espacio, sigue manteniendo su sitio, y no molesta a sus hermanos, 
+  por eso podemos poner cosas por arriba o por debajo de otras*/
+
+.div1 {
+  background-color: brown;
+  left: 100px; /*empujo desde la izquierda para mover hacia la derecha*/
+  top: 50px; /*desde arriba empujo hacia abajo*/
 }
 .div2 {
-  width: 300px;
-  height: 300px;
   background-color: green;
-  margin: 40px;
-  padding: 30px;
-  position: relative;
-  right: 150px;
-  bottom: 320px;
-  text-align: center;
+  right: 150px; /*empujo desde la derecha para mover hacia la izquierda*/
+  bottom: 320px; /*desde abajo empujo hacia arriba*/
+  
 }
 .div3 {
-  width: 300px;
-  height: 300px;
   background-color: pink;
-  margin: 40px;
-  padding: 30px;
-  position: relative;
   left: 180px;
   bottom: 240px;
 }
