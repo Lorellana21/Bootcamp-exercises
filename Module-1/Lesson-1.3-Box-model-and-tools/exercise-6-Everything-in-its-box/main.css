@@ -1,17 +1,19 @@
-* {
-  box-sizing: border-box;
+body {
+  margin: 3em 2em;
 }
-
-h2 {
-  font-size: 18px;
+.container {
+  border: 1px solid deeppink;
+  margin: 1em;
+  width: 300px;
 }
-
-div{
-  height: 100px;
-  width: 100px;
-  padding: 10px;
-  border: solid black 5px;
-  margin: auto;
+.container--mini {
+  width: 70px;
+  overflow-y: hidden;
+}
+.container--img {
+  width: 150px;
+  height: 150px;
+  overflow-x: scroll;
 }
 
 
