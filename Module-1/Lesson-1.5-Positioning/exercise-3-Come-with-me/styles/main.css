@@ -1,0 +1,18 @@
+.header{
+    background: purple;
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1; /*Con esto consigo que el texto no se vea por debajo del header*/
+}
+
+
+/*.main{
+    position: absolute; ASI TB FUNCIONA
+    top: 70px;
+}*/ 
+
+.main{
+    position: relative;
+    top: 70px;
+}
