@@ -1,0 +1,84 @@
+<!--La web que vamos a crear consta de las siguientes características:
+Toda la web usa una tipografía sin serifa (sans-serif)
+Tiene como título "Tecnologías web"
+Tiene un párrafo que describe qué son las tecnologías web
+Al final del párrafo, tiene un listado de tecnologías compuesto por: 
+HTML, CSS y JavaScript, cada una de las cuales aparece subrayada para 
+indicar que se puede interactuar
+Al poner el ratón sobre cualquiera de ellas:
+el cursor cambia para indicar que estamos obteniendo ayuda
+aparece un tooltip (recuadro flotante de 400px por 200px) de color blanco, 
+con el nombre de la tecnología como título del tooltip y una breve descripción 
+de la misma-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body class="body">
+    <article class="article">
+        <h1 class="title">Tecnologías web</h1>
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            sapiente, alias nobis est, fuga quam delectus enim expedita corporis
+            ducimus atque voluptatum. Repellat, doloremque laudantium. Qui totam
+            tempora enim odit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            sapiente, alias nobis est, fuga quam delectus enim expedita corporis
+            ducimus atque voluptatum. Repellat, doloremque laudantium. Qui totam
+            tempora enim odit?
+        </p>
+        <ul class="list">
+            <li>
+                <a class="tooltip" href="#">
+                    HTML
+                    <span class="tiptext">
+                        <h2>HTML</h2>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
+                            maxime cupiditate eos deleniti temporibus reiciendis, assumenda
+                            reprehenderit omnis error vel consequatur repellat vero, earum
+                            in pariatur, ullam quis! At, iste?
+                        </p>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="tooltip" href="#">
+                    CSS
+                    <span class="tiptext">
+                        <h2>CSS</h2>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
+                            maxime cupiditate eos deleniti temporibus reiciendis, assumenda
+                            reprehenderit omnis error vel consequatur repellat vero, earum
+                            in pariatur, ullam quis! At, iste?
+                        </p>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="tooltip" href="#">
+                    JavaScript
+                    <span class="tiptext">
+                        <h2>JavaScript</h2>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
+                            maxime cupiditate eos deleniti temporibus reiciendis, assumenda
+                            reprehenderit omnis error vel consequatur repellat vero, earum
+                            in pariatur, ullam quis! At, iste?
+                        </p>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>
