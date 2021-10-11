@@ -1,0 +1,26 @@
+.body{
+    margin: 8px;
+}
+.article{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 106px;
+}
+.author{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.title{
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+.text{
+    font-size: 18px;
+    margin-bottom: 27px;
+}
+.info{
+    text-decoration:underline;
+    color: blue;
+    padding: 8px 16px;
+    margin-left: -16px;
+}
