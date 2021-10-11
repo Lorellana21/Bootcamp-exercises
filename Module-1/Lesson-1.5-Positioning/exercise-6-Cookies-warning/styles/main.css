@@ -1,0 +1,9 @@
+.div-last{
+    height: 100px;
+    width: 100vw;
+    background: yellow;
+    text-align:center;
+    line-height: 100px;
+    position: fixed;
+    bottom: 0;
+}
