@@ -1,17 +1,16 @@
-b
-* {
+b * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   margin: 0;
 }
 /*HEADER*/
-.header{
+.header {
   width: 100vw;
   background-color: black;
   color: white;
 }
 
-.header-inner{
+.header-inner {
   max-width: 600px;
   margin: 0 auto 0 auto;
   display: flex;
@@ -20,29 +19,57 @@ b
   align-items: center;
 }
 
-.list{
+.list {
   width: 30vw;
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  color:white;
+  color: white;
 }
-a{
+a {
   color: white;
 }
 
 /*MAIN*/
-.container{
-max-width: 600px;
+
+/*Modal*/
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(34, 34, 34, 0.6);
+  display: flex; /*Para que la modal quede en el centro*/
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+.modal {
+  width: 400px;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.buttons {
+  display: inline;
+}
+/*Acaba la Modal*/
+
+.container {
+  max-width: 600px;
   margin: 0 auto 0 auto;
-/*min-height: calc(100vh - 80px - 80px);*/
+  /*min-height: calc(100vh - 80px - 80px);*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.author-date{
+.author-date {
   margin-top: 50px;
   margin-bottom: 50px;
   width: 100%;
@@ -50,32 +77,16 @@ max-width: 600px;
   flex-direction: row;
   justify-content: space-between;
 }
-.main-title{
+.main-title {
   margin-bottom: 50px;
-}
-.modal-container{
-    width: 100vw;
-    height: 100vh;
-    background: rgba(34,34,34,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.modal{
-  background: rgba(0, 0, 0, 0.9);
-  color: #fff;
-
-  transition: all .5s;
-  text-align: center;
 }
 
 /*FOOTER*/
-.footer{
-  border-top:solid olive 2px; /*este footer quiero que me ocupe todo el ancho*/
+.footer {
+  border-top: solid olive 2px; /*este footer quiero que me ocupe todo el ancho*/
   margin-top: 50px;
 }
-.footer-inner{
+.footer-inner {
   margin: 0 auto 0 auto; /*para centrar esta caja en la pantalla. Calcula el espacio sobrante*/
   max-width: 600px; /*este quiero que ocupe hasta 600px*/
   height: 80px;
@@ -85,11 +96,11 @@ max-width: 600px;
   align-items: center;
   /*position: absolute; se queda fijo abajo
   bottom: 0;*/
-  position:relative; /*acompaña según haya mas texto o menos*/
+  position: relative; /*acompaña según haya mas texto o menos*/
 }
-.footer-list{
+.footer-list {
   list-style: none;
-  display:flex;
+  display: flex;
   flex-direction: row;
   width: 30vw;
   justify-content: space-between;
