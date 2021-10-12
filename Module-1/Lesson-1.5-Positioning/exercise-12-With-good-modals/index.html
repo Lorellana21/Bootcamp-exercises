@@ -1,0 +1,97 @@
+<!--Vamos a continuar desde el ejercicio 8 de la lección de flexbox y vamos a 
+    añadir una modal.
+Crearemos un elemento que se superponga sobre él. 
+Ese elemento tendrá un fondo oscuro transparente y un div en su interior. 
+Ese div entero estará centrado tanto vertical como horizontalmente y contendrá 
+un titular, un texto y un par de botones. 
+En la imagen, es importante observar que la cabecera estará por debajo de la 
+ventana emergente.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="title">Mi blog</h1>
+            <nav class="nav">
+                <ul class="list">
+                    <li>
+                        <a href="">Inicio</a>
+                    </li>
+                    <li><a href="">Archivo</a></li>
+                    <a href="">Contacto</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <article class="container">
+            <div class="author-date">
+                <p>Juan Gutiérrez</p>
+                <p>Posted on March 22th, 2015</p>
+            </div>
+            <h1 class="main-title">El veloz murciélago hindú comía feliz cardillo y kiwi</h2>
+                <p class="text">palabras, un texto es un entramado de signos con una intención comunicativa que adquiere
+                    sentido
+                    en determinado
+                    contexto.Las ideas que comunica un texto están contenidas en lo que se suele denominar
+                    «macroproposiciones»,
+                    unidades
+                    estructurales de nivel superior o global, que otorgan coherencia al texto constituyendo su hilo
+                    central, el
+                    esqueleto estructural que cohesiona elementos lingüísticos formales de alto nivel, como los títulos
+                    y
+                    subtítulos,
+                    la secuencia de párrafos, etc. En contraste, las «microproposiciones» son los elementos coadyuvantes
+                    de la
+                    cohesión de un texto, pero a nivel más particular o local. Esta distinción fue realizada por Teun
+                    van Dijk en
+                    1980.El nivel microestructural o local está asociado con el concepto de cohesión. Se refiere a uno
+                    de los
+                    fenómenos
+                    propios de la coherencia, el de las relaciones particulares y locales que se dan entre elementos
+                    lingüísticos,
+                    tanto los que remiten unos a otros como los que tienen la función de conectar y organizar.
+                    También es un conjunto de oraciones agrupadas en párrafos que habla de un tema determinado.
+                    estructurales de nivel superior o global, que otorgan coherencia al texto constituyendo su hilo
+                    central, el
+                    esqueleto estructural que cohesiona elementos lingüísticos formales de alto nivel, como los títulos
+                    y
+                    subtítulos,
+                    la se </p>
+        </article>
+        <article>
+            <div class="modal-container">
+                <div class="modal">
+                    <h2>¿HOLA!</h2>
+                    <p>Suscríbete a nuestra newsletter para estar al dia de nuestras noticias</p>
+                    <button>Rechazar</button>
+                    <button>Suscribirme</button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <!--va en un div porque necesito que el borde me ocupe toda la pantalla-->
+            <small>&copy;Copyright Juan Gutiérrez</small>
+            <ul class="footer-list">
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>GitHub</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

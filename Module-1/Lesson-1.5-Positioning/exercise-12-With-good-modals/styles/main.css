@@ -1,0 +1,96 @@
+b
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+/*HEADER*/
+.header{
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+
+.header-inner{
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list{
+  width: 30vw;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color:white;
+}
+a{
+  color: white;
+}
+
+/*MAIN*/
+.container{
+max-width: 600px;
+  margin: 0 auto 0 auto;
+/*min-height: calc(100vh - 80px - 80px);*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.author-date{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-title{
+  margin-bottom: 50px;
+}
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(34,34,34,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal{
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+
+  transition: all .5s;
+  text-align: center;
+}
+
+/*FOOTER*/
+.footer{
+  border-top:solid olive 2px; /*este footer quiero que me ocupe todo el ancho*/
+  margin-top: 50px;
+}
+.footer-inner{
+  margin: 0 auto 0 auto; /*para centrar esta caja en la pantalla. Calcula el espacio sobrante*/
+  max-width: 600px; /*este quiero que ocupe hasta 600px*/
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*position: absolute; se queda fijo abajo
+  bottom: 0;*/
+  position:relative; /*acompaña según haya mas texto o menos*/
+}
+.footer-list{
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-between;
+}
