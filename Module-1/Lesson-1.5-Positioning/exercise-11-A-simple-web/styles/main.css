@@ -1,0 +1,41 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header{
+    height: 50px;
+    background: yellowgreen;
+}
+h1{
+    font-size: 40px;
+    font-weight:bold;
+}
+.main{
+    background: violet;
+}
+.text{
+    margin: 15px;
+}
+.footer{
+    background: yellowgreen;
+}
+.footer{
+    height: 100px;
+}
+h3{
+    font-size: 30px;
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+.item{
+    display: inline;
+    padding: 5px;
+}
+.cookies{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    background: black;
+    color: white;
+    margin-right: 10px;
+}
