@@ -1,0 +1,49 @@
+<!--Vamos a hacer algo más "real" y probamos a implementar esta 
+  "columna central". En un HTML tendremos un contenedor con:
+Un título
+Uno o dos párrafos de texto
+Y vamos a plantear 3 escenarios (de pequeño a grande):
+Vamos a empezar con el CSS de móvil e iremos ajustando los estilos 
+según dispongamos de mayores tamaños de pantalla:
+1- Por defecto:
+Nuestro contenedor tendrá 20px de margen a cada lado
+El título estará en negrita y a 32px
+El texto de los párrafos estará a 18px con un interlineado de 24px
+
+2- De 768px en adelante:
+Nuestro contenedor tendrá 30px de margen superior y 40px de margen 
+a cada lado
+El título estará en negrita y a 28px
+El texto de los párrafos estará a 16px con un interlineado de 20px
+
+3- De 1140px en adelante:
+Nuestro contenedor tendrá 190px de margen superior y margen 
+automático a cada lado, con un ancho máximo de 750px
+El título estará en negrita y a 42px
+El texto de los párrafos estará a 24px con un interlineado de 32px-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+  <section class="section-container">
+    <h1 class="title">Mi título</h2>
+      <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex blanditiis porro, nobis quo ipsa
+        non perferendis saepe aliquid, quae inventore possimus, nulla architecto! Vitae illo sed natus corrupti a quasi.
+      </p>
+      <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime aperiam laudantium
+        repudiandae! Alias illum esse beatae ut dolorum molestias earum in? Sapiente doloremque voluptas, cum quae quod
+        accusamus voluptates libero?</p>
+  </section>
+</body>
+
+</html>
