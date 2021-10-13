@@ -1,8 +1,6 @@
 .body{
   background-color: rgb(180, 175, 175);
-}
-.header{
-  background-color: rgb(143, 134, 134);
+  height: 100vh;
 }
 h1{
   font-weight: bold;
@@ -21,9 +19,9 @@ h2{
   padding-bottom: 20px;
 }
 .aside{
-  background-color: thistle;
-  border-top: solid 10px grey;
-  border-bottom: solid 10px grey;
+  background-color: rgb(107, 101, 107);
+  margin: 10px 0 10px;
+  
 }
 h3{
   font-weight: bold;
@@ -57,19 +55,18 @@ h3{
     justify-content: space-between;
   }
   .main-heading{
-    width: 40%;
+    width: 50vw;
     height: 500px;
     position:static;
   }
-  
   .nav{
     height: 100px;
-    width: 200px;
+    width: 10vw;
     position: static;
   }
   .aside{
     height: 200px;
     position: static;
-    width: 20vw;
+    width: 30vw;
   }
 }
