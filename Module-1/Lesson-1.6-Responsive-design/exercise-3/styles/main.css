@@ -1,0 +1,16 @@
+.news {
+  margin: 2em auto 0;/*top, left/right, bottom; "Auto", means the browser 
+  automatically calculate the value for the left and right margins*/
+  width: 400px;
+  border: 1px solid red;
+  padding: 1em;
+}
+.news__image {
+  width: 100%;
+}
+.news__content {
+  border: 1px dashed pink;
+  max-height: 222px;
+  padding: 0 .5em;
+  overflow-y: auto;
+}
