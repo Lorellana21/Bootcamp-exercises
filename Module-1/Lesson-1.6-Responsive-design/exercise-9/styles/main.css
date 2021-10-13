@@ -30,7 +30,7 @@ h3{
   font-size: 30px;
   padding-bottom: 20px;
 }
-@media all and (max-width:1000px){
+@media all and (min-width:480px){
   .nav{
     position: fixed;
     left: 0;
@@ -53,20 +53,23 @@ h3{
 @media all and (min-width:1000px){
   .container{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
   .main-heading{
     width: 40%;
     height: 500px;
+    position:static;
   }
-  .aside{
-    width: 20%;
-    height: 200px;
-  }
+  
   .nav{
     height: 100px;
     width: 200px;
+    position: static;
   }
-
-
+  .aside{
+    height: 200px;
+    position: static;
+    width: 20vw;
+  }
 }
