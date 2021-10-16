@@ -1,0 +1,24 @@
+.section1 {
+    position: relative;
+    background-color: $color-secondary;
+    height: 50vh;
+    &__text {
+        @include absolutecenter();
+    }
+}
+.section2 {
+    position: relative;
+    background-color: lighten($color: salmon, $amount: 10%);
+    height: 30vh;
+    &__title {
+        @include absolutecenter();
+    }
+    &__container-button {
+        @include absolutecenter();
+    }
+    &__container-button--button {
+        border-radius: solid 5px black;
+        background-color: red;
+        height: 45px;
+    }
+}

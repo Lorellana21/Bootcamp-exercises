@@ -1,11 +1,11 @@
-header {
+.header {
     height: 75px;
     background-color: grey;
 
-    @media (min-width: 768px) {
+    @include tablet {
         height: 100px;
     }
-    @media (min-width: 1024px) {
+    @include desktop {
         height: 110px;
     }
 }
