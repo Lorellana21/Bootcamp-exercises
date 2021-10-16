@@ -1,0 +1,65 @@
+
+.header {
+  background-color: #14d9c4;
+}
+.title{
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.main {
+  background-color: #eee;
+}
+.title2{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.footer {
+  border: 1px solid #000;
+  background-color: #14d9c4;
+  padding: 10px;
+  padding-left: 50%;
+  margin: 10px;
+}
+.central-column {
+  margin: 0 auto;
+  background: rgba(200, 200, 200, 0.5);
+  max-width: 600px;
+}
+
+  @media all and (min-width: 768px) {
+    .central-column{
+      max-width: 700px;
+  }
+}
+
+  @media all and (min-width: 900px) {
+    .central-column {
+      max-width: 800px;
+  }
+}
+
+  @media all and (min-width: 1200px) {
+    .central-column{
+      max-width: 1000px;
+  }
+}
+
+  /* Con esto conseguimos que el contenido se ajuste verticalmente */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+
+  
+  
+
+
