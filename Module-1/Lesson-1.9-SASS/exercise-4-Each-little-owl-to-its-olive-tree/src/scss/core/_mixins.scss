@@ -1,0 +1,16 @@
+@mixin absolutecenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin tablet {
+    @media all and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media all and (min-width: 1024px) {
+        @content;
+    }
+}

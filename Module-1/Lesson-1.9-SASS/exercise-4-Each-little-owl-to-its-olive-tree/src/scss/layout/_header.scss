@@ -1,0 +1,11 @@
+.header {
+    height: 75px;
+    background-color: grey;
+
+    @include tablet {
+        height: 100px;
+    }
+    @include desktop {
+        height: 110px;
+    }
+}
