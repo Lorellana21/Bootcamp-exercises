@@ -1,3 +1,10 @@
+<!--Un header de 75 de alto en móvil, 100 en tablet (768px) 
+  y 110 en desktop (1280px)
+  Una home con 2 bloques:Una sección principal que ocupe la mitad del 
+  alto de la pantalla con un texto en el centro
+  Una sección con un título y un botón rojo, con bordes de 5px de radio y 
+  45px de altura-->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,28 +18,9 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="wrapper">Header</div>
-  </header>
-  <main class="main">
-    <div class="wrapper">
-      <h1 class="main__title">Main</h1>
-      <div class="main__content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quasi adipisci consectetur debitis sapiente
-          non rem modi inventore tenetur vitae corrupti distinctio aperiam eligendi ducimus eius possimus, totam
-          consequuntur molestias.</p>
-        <p>Sequi cupiditate, cum explicabo et officiis rerum nostrum minima eum laboriosam quo perferendis facilis
-          debitis eligendi magnam veniam atque, labore ipsa repellat voluptatibus, aspernatur fuga recusandae porro.
-          Pariatur, laudantium numquam.</p>
-        <p>Iusto, minus obcaecati consectetur vel accusamus, omnis asperiores quo qui vero molestiae doloribus quia
-          distinctio nostrum nisi eum hic dolorem voluptatum amet, quaerat libero iure repudiandae laborum molestias.
-          Ipsam, totam!</p>
-      </div>
-    </div>
-  </main>
-  <footer class="footer">
-    <div class="wrapper">Footer</div>
-  </footer>
+  <include src="./partials/header.html"></include>
+  <include src="./partials/section-main.html"></include>
+  <include src="./partials/section2.html"></include>
 </body>
 
 </html>
