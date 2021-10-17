@@ -1,0 +1,24 @@
+.form {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(221, 220, 209, 1) 7%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: solid 2px black;
+  max-width: 400px;
+  margin: 0 auto;
+}
+input {
+  margin: 5px;
+}
+
+.button{
+    border: 2px solid red;
+    border-radius: 25px;
+    background-color: green;
+    color: white;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+}
