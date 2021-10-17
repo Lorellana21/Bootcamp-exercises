@@ -7,12 +7,18 @@
   );
   border: solid 2px black;
   max-width: 400px;
+  margin: 0 auto;
 }
 input {
   margin: 5px;
 }
+
 .button{
-    border-radius: solid 3px green;
+    border: 2px solid red;
+    border-radius: 25px;
     background-color: green;
     color: white;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
 }
