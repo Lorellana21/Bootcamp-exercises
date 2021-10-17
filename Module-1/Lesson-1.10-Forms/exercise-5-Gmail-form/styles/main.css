@@ -1,0 +1,29 @@
+*{
+  box-sizing:border-box;
+}
+
+.form{
+	width:400px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+.form{
+	font-weight:bold;
+	display: block;
+}
+label{
+  display: block;
+  margin-top: 10px;
+}
+
+
+
+.button{
+    background-color: blue;
+    color: white;
+    display: block;
+    height: 30px;
+    margin-left: 200px;
+}
