@@ -1,0 +1,60 @@
+<!--Vamos a crear un formulario de envío con los siguientes campos:
+Nombre
+Apellido
+Email
+Calle
+Ciudad
+Provincia
+País
+DNI
+Teléfono
+Contraseña
+Confirmar contraseña
+Botón de enviar
+Todos los elementos deberán de tener un atributo placeholder e ir 
+acompañados de un label para definir qué se debe introducir en cada uno de ellos
+Vamos a añadir un atributo required a algunos campos del ejercicio.
+Para comprobar que funciona correctamente intentaremos enviar el formulario 
+sin rellenar ningún campo y ver si nos muestra el error.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body class="body">
+    <form class="form" action="/signup" method="post">
+        <label for="firstName">Nombre</label>
+        <input placeholder="Escribe aquí tu nombre de pila..." id="firstName" type="text" name="firstName" required />
+        <label for="lastName">Apellido</label>
+        <input placeholder="Escribe aquí tus apellidos..." id="lastName" type="text" name="lastName" required />
+        <label for="emailAddress">Correo electrónico</label>
+        <input type="email" id="mail" name="mail" placeholder="nombre@hosting.com" size="30" required="required"
+            autofocus>
+        <label for="address">Dirección:</label>
+        <input type="text" id="address" name="address" value="Calle Méndez Álvaro" disabled></textarea>
+        <label for="pais">País</label>
+        <select name="pais" id="pais" required="required">
+            <option value="AF">Afganistán</option>
+            <option value="AL">Albania</option>
+            <option value="ES" selected>España</option>
+        </select>
+        <label for="tarjeta">DNI</label>
+        <input type="number" id="tarjeta" name="dni" required="required" placeholder="DNI">
+        <label for="telephone">Teléfono</label>
+        <input type="tel" id="telephone" name="telephone" />
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" />
+        <label for="password">Confirmar Contraseña</label>
+        <input type="password" id="password" name="password" />
+        <input type="submit" value="Enviar" />
+    </form>
+</body>
+
+</html>

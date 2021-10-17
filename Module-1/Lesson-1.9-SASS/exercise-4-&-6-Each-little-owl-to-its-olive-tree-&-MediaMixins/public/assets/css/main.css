@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.header {
+  height: 75px;
+  background-color: grey; }
+  @media all and (min-width: 768px) {
+    .header {
+      height: 100px; } }
+  @media all and (min-width: 1024px) {
+    .header {
+      height: 110px; } }
+
+.section1 {
+  position: relative;
+  background-color: darkgrey;
+  height: 50vh; }
+  .section1__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+.section2 {
+  position: relative;
+  background-color: #fcaca3;
+  height: 30vh; }
+  .section2__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .section2__container-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .section2__container-button--button {
+    border-radius: solid 5px black;
+    background-color: red;
+    height: 45px; }
+
+/*# sourceMappingURL=main.css.map */
