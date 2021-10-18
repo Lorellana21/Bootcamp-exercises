@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adalab Web Starter Kit</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>1.10 Formularios</h1>
+      <h2>Checkbox, radio y select</h2>
+      <nav>
+        <a href="./input.html">Ver ejercicio de inputs</a>
+      </nav>
+    </header>
+    <div class="page">
+      <form action="#" method="GET">
+        
+        <fieldset>
+          <label><input type="checkbox" name="mascota" value="dog"> Perrico</label>
+          <label><input type="checkbox" name="mascota" value="cat"> Gatete</label>
+          <label><input type="checkbox" name="mascota" value="dolphin"> Delfín</label>
+          <label><input type="checkbox" name="mascota" value="parrot"> Loro</label>
+        </fieldset>
+
+        <fieldset>
+          <label><input type="checkbox" name="travel" value="m"> Montaña</label>
+          <label><input type="checkbox" name="travel" value="c"> Ciudad</label>
+          <label><input type="checkbox" name="travel" value="b"> Playa</label>
+        </fieldset>
+
+        <fieldset>
+          Sexo:
+          <div><label><input type="radio" name="gender" value="W"> Mujer</label></div>
+          <div><label><input type="radio" name="gender" value="M"> Hombre</label></div>
+          <div><label><input type="radio" name="gender" value="N"> No quiero decirlo</label></div>
+        </fieldset>
+
+        <select name="age" id="">
+          <option selected disabled value="">Escoge una opción:</option>
+          <option value="1">1-10</option>
+          <option value="2">11-19</option>
+          <option value="3">20-55</option>
+          <option value="4">56-80</option>
+        </select>
+
+        <input type="date" name="birthday" id="">
+
+        <input type="reset" value="Borrar">
+
+        <input type="submit" value="Enviar">
+
+        
+      </form>
+
+      
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

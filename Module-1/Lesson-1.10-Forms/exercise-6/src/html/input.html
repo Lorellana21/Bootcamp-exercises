@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adalab Web Starter Kit</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="icon" href="./assets/images/favicon.png" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>1.10 Formularios</h1>
+    <h2>Inputs</h2>
+    <nav>
+      <a href="./index.html">Ver ejercicio de selección múltiple</a>
+    </nav>
+  </header>
+  <div class="page">
+    <form action="#" method="POST">
+      <label for="name">Nombre:</label>
+      <input class="input-ejemplo" type="text" name="name" id="name" placeholder="Ej: Mari Carmen" required>
+      <label>
+        Email:
+        <input class="input-ejemplo" type="email" name="email" placeholder="Ej: paquita.salas@adalab.es" disabled>
+      </label>
+      <label>
+        Teléfono:
+        <input class="input-ejemplo input-phone" type="tel" name="phone" id="" placeholder="Ej: 999 333 444">
+      </label>
+      <label>
+        Contraseña:
+        <input class="input-ejemplo" type="password" name="passwd" placeholder="Contraseña">
+      </label>
+
+      <div>
+        <label>Número: <input type="number" name="number" min="0" max="10" value="1">cm.</label>
+      </div>
+
+      <input type="submit" value="Enviar">
+      <button><img src="https://placekitten.com/50/50" alt="">Enviar</button>
+
+    </form>
+
+
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

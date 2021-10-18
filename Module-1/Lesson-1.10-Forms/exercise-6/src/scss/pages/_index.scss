@@ -1,0 +1,30 @@
+.page {
+  font-size: 16px;
+  padding: 3em;
+}
+
+.header {
+  font-size: 16px;
+  margin: 3em;
+}
+
+.input-ejemplo {
+  font-size: 24px;
+  border: solid 1px pink;
+}
+
+#name {
+  color: green;
+}
+
+.input-phone {
+  color: blue;
+}
+
+.input-phone::placeholder {
+  color: lightcoral;
+}
+
+.input-ejemplo:invalid {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
