@@ -1,0 +1,39 @@
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
+  grid-template-rows: 20% 60% 20%;
+  color: white;
+  grid-gap: 5px;
+}
+.item{
+  background-color: rgb(219, 27, 139);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item1{
+  grid-column: span 12;
+  background-color: pink;
+  /* grid-row: 1 / 2; */
+}
+.item4{
+  grid-column: span 12;
+  background-color: cadetblue;
+}
+.item2{
+  grid-column: span 4;
+  background-color: darkblue;
+}
+.item3{
+  grid-column: span 8;
+  background-color: rgb(179, 74, 74);
+}
+
+
+
+
+  
+  
+
+
