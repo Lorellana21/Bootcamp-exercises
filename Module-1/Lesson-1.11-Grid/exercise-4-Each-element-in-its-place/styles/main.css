@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*2 columnas*/
+  grid-template-rows: 50px 100px 50px; /*3 filas*/
+  /*para nombrar los espacios*/
+  grid-template-areas: "header header" "main aside" "footer footer"; 
+  gap: 5px;
+}
+.item {
+  background: #89ece1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item--header { /*Para que el header se coloque en esta área*/
+  grid-area: header;
+}
+.item--main {
+  grid-area: main;
+}
+.item--aside {
+  grid-area: aside;
+}
+.item--footer {
+  grid-area: footer;
+}
+
+
+
+
+  
+  
+
+
