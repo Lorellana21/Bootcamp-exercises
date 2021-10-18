@@ -1,0 +1,35 @@
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;  
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  color: white;
+  grid-gap: 5px;
+}
+.item{
+  background-color: rgb(219, 27, 139);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item1{
+  grid-column: span 2;
+}
+.item2{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.item3{
+  grid-row: span 2;
+}
+.item6{
+  grid-column: span 2;
+}
+
+
+
+  
+  
+
+
