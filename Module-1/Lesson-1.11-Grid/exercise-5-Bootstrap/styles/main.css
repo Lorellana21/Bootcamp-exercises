@@ -1,0 +1,28 @@
+.container-fluid {
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+
+.header {
+background-color: blueviolet;
+height: 15vh;
+}
+.menu{
+  background-color: burlywood;
+  height: 30vh;
+}
+.content{
+background-color: coral;
+}
+.footer{
+  background-color: crimson;
+  height: 15vh;
+}
+
+
+  
+  
+
+
