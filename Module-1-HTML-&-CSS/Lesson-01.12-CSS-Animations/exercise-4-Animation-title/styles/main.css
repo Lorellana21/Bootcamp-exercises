@@ -1,0 +1,53 @@
+.body {
+  margin: 0;
+  font: 16px arial, sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://img.freepik.com/vector-gratis/dibujado-mano-lindo-fondo-contorno-mariposa_23-2149021590.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  font-weight: bold;
+  font-size: 50px;
+  /* position: relative; Con la opción del translate
+  top: -550px; */
+  animation-name: move;
+  animation-duration: 5s;  
+  
+}
+@keyframes move {
+  from {
+    margin-top: -150%;
+    opacity: 1;
+    color: black;
+    /* transform: translateY(-50px); Asi funciona pero al final desaparece 
+    el titulo.*/
+  }
+
+  to {
+    margin-top: 0%;
+    opacity: 0.2;
+    color: green;
+   /* transform: translateY(500px); */
+  }
+}
+
+
+
+
+
+
+
+  
+  
+
+
