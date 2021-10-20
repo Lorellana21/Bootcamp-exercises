@@ -1,5 +1,5 @@
 Enunciado:
-Prtiendo de un contenedor que ocupe el 100% de la pantalla (en alto y ancho) con una imagen de fondo y un título centrado... Tendremos que hacer que el título tenga una animación que lo haga entrar suavemente desde la parte superior del navegador y quedarse en el centro de su contenedor.
+Partiendo de un contenedor que ocupe el 100% de la pantalla (en alto y ancho) con una imagen de fondo y un título centrado... Tendremos que hacer que el título tenga una animación que lo haga entrar suavemente desde la parte superior del navegador y quedarse en el centro de su contenedor.
 
 Problem definition:
 On a container occupying the entire screen, with a background image and a centered title... you have to animate the title: it must enter gently from above and stand still in the middle.
