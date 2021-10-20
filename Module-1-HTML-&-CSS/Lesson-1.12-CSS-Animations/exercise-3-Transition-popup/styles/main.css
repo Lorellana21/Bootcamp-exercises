@@ -1,0 +1,48 @@
+.body {
+  margin: 0;
+  font: 16px arial, sans-serif;
+  background: #9b91c2;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: absolute; /*solo funciona con absolute*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.popup {
+  background: chartreuse;
+  position: fixed;
+  bottom: -300px;
+
+  width: 500px;
+  height: 300px;
+
+  border: solid 2px red;
+  border-radius: 5px;
+
+  text-align: center;
+  line-height: 300px;
+  box-shadow: 0px 0px 10px 1px #888888;
+
+  transition: transform 2s;
+}
+
+.container:hover .popup{
+  transform: translateY(-65vh);
+}
+
+
+
+
+
+  
+  
+
+
