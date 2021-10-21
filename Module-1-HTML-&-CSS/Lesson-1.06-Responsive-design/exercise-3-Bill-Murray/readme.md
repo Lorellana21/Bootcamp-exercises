@@ -3,6 +3,7 @@ En el siguiente [codepen](https://codepen.io/adalab/pen/MOjMPr) hay un módulo c
 - ¿Qué pasa si duplicas el párrafo de texto?
 - ¿Y si duplicas otra vez?
 
+***
 
 In the following [codepen](https://codepen.io/adalab/pen/MOjMPr) there is a module with a news item about Bill Murray. Nothing new, right?
 
