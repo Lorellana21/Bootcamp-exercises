@@ -1,4 +1,4 @@
-Dados los siguientes diseños, maquetar la web aplicando las mediaqueries necesarias.
+Dados los siguientes diseños, maquetar la web aplicando las mediaqueries necesarias. ||
 Given the following designs, layout the web applying the necessary mediaqueries.
 
 Aspecto de la web en una pantalla de 480px:
