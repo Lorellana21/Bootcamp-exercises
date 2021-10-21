@@ -3,7 +3,8 @@
 Partiendo de estos documentos:
 index.html
 
-```<!DOCTYPE html>
+~~~
+<!DOCTYPE html>
 <html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
@@ -13,13 +14,12 @@ index.html
   <body> 
 <div class="smiley">:)</div>
 </body>
-</html>```
+</html>
+~~~
 
-y
+y main.css:
 
-main.css:
-
-```
+~~~
 html {  
     font-size: 16px;
     }
@@ -38,7 +38,8 @@ html {
      top: 50%;  
      transform: translate(-50%, -50%);  
      border-radius: 50%;
-     }```
+     }
+ ~~~
      
 1. Pasar las medidas en píxels a rem
 1. ¿Qué tamaño de fuente tengo que poner para que mi careto mida 50x50?
