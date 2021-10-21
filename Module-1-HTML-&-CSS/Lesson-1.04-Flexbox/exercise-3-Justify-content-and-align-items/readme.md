@@ -13,7 +13,7 @@
 1. Todos los textos deben aparecer centrados verticalmente en el contenedor de 100px
 1. El espacio restante debe usarse para separar las opciones de menú, unas de otras
 
-[](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2Fc6a61be3b45ba6e308f22079302d6cfd1f602d8a.png?generation=1617004306443939&alt=media)
+![](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2Fc6a61be3b45ba6e308f22079302d6cfd1f602d8a.png?generation=1617004306443939&alt=media)
 
 ## Justify content and align items
 
