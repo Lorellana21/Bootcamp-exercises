@@ -4,7 +4,7 @@
 1. Hacer que se distribuyan en horizontal o vertical.
 1. Indicar cuál es el eje principal.
 
-[](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2F817e31479953d8629d24f964aebee035c10e47a0.png?generation=1617004306724060&alt=media)
+![](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2F817e31479953d8629d24f964aebee035c10e47a0.png?generation=1617004306724060&alt=media)
 
 ## Flex and flex-direction
 
