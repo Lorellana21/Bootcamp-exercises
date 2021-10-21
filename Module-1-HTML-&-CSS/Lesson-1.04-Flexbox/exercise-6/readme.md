@@ -1,4 +1,4 @@
-[](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2F4feede2e2065ea0e7c8ef444f71fcf02b9031403.png?generation=1617004306837641&alt=media)
+![](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2F4feede2e2065ea0e7c8ef444f71fcf02b9031403.png?generation=1617004306837641&alt=media)
 
 Convertir la imagen anterior a código usando HTML y CSS y lo que habéis aprendido hoy de Flexbox. Los requisitos son los siguientes:
 - Las medidas tienen que ser relativas, es decir, los elementos de la página deben adaptarse al ancho de la ventana del navegador web. Si el tamaño de la ventana aumenta, el tamaño de los elementos debe aumentar.
