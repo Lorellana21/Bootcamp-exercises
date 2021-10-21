@@ -3,7 +3,7 @@
 Hacer una página con `header`, `main` y `footer` y hacer que aunque haya poco contenido el footer siempre está abajo de la página y el main ocupe todo el espacio disponible. Si hubiese mucho contenido el footer debe colocarse tras el main, de forma natural.
 Pista: Tendremos que apoyarnos en min-height y vh para realizar este ejercicio.
 
-[](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2Fc472e68fa85f62bd53c140170083a50c1216f2e6.png?generation=1617004305878086&alt=media)
+![](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2Fc472e68fa85f62bd53c140170083a50c1216f2e6.png?generation=1617004305878086&alt=media)
 
 ## Flex, grow, shrink and basis
 
