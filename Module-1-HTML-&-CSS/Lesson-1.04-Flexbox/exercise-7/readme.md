@@ -5,7 +5,9 @@ Convertir la imagen a código usando HTML y CSS y lo que habéis aprendido hoy d
 - No os preocupeis por el tamaño de cada elemento, lo importante es que el resultado tenga una composición similar
 - Para redondear los bordes debéis usar border-radius con unidades en píxel (por ejemplo, border-radius: 5px)
 
-[](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2F8a8fc7ab473b88d65b76a4ffa2c86c2e2710c2c3.png?generation=1617004307435922&alt=media)
+
+
+![](https://files.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MWwxJ68y05F115J-zJ5%2Fsync%2F8a8fc7ab473b88d65b76a4ffa2c86c2e2710c2c3.png?generation=1617004307435922&alt=media)
 
 Convert the above image to code using HTML and CSS and what you have learned today from Flexbox. The requirements are as follows:
 
