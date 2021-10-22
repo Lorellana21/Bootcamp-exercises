@@ -1,5 +1,5 @@
 Vamos a ver cómo funcionan las transiciones cuando hay muchos elementos.
-En este dashboard básico y tendréis que aplicar unas transiciones para suavizar los efectos que se modifican al hacer hover:
+En este dashboard básico tendréis que aplicar unas transiciones para suavizar los efectos que se modifican al hacer hover:
 
 - Color de fondo (.5s)
 - Sombra (1s)
@@ -11,7 +11,7 @@ En este dashboard básico y tendréis que aplicar unas transiciones para suaviza
 ***
 
 Let's see how transitions work when there are many elements.
-In this basic dashboard and you will have to apply some transitions to smooth the effects that are modified when hovering:
+In this basic dashboard you have to apply some transitions to smooth the effects that are modified when hovering:
 - Background colour (.5s)
 - Shadow (1s)
 
