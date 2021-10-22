@@ -1,0 +1,35 @@
+* {
+    font-family: sans-serif;
+  }
+  
+  .title {
+    text-decoration: underline;
+  }
+  
+  .title:hover {
+    cursor: help;
+  }
+  
+  .tooltip {
+    /* display: none;(hace como si no exisitiera) */
+    visibility: hidden; /*respeta el espacio que ocupa */
+    position: absolute; /*para que lo saque del flujo de caja, pero esta posicion 
+    es relativa al body, por eso abajo hemos puesto a language la position relative*/
+    top: -1rem;
+    left: 100px;
+    border: 1px solid #666;
+    background-color: #eee;
+    width: 400px;
+    height: 200px;
+    z-index: 1;
+  }
+  
+  .language {
+    position: relative;
+  }
+  
+  .language:hover .tooltip {
+    /* cuando el hover esta en "language", me muestra el tooltip
+    display: block; */
+    visibility: visible;
+  }

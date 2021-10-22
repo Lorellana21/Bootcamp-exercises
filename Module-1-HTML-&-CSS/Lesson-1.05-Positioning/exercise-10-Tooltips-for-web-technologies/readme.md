@@ -23,3 +23,5 @@ The website we are going to create has the following characteristics:
 
 - the cursor changes to indicate that we are getting help
 - a white tooltip (400px by 200px floating box) appears, with the name of the technology as the title of the tooltip and a brief description of the technology
+
+
