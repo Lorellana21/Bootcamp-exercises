@@ -1,0 +1,30 @@
+* {
+    font-family: sans-serif;
+  }
+  
+  .modal-overlay {
+    background-color: rgba(100, 100, 100, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* opacity: 0.5; no me vale
+    opción 1 con flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    border: 1px solid #000;
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    /* opción 2 con position
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%); */
+  }
