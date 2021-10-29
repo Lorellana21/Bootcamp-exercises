@@ -6,3 +6,4 @@ const result = myNumber + herNumber;
 
 console.log(result);
 console.log(myNumber + herNumber);
+
