@@ -12,7 +12,7 @@ const secondDogName = 'Luna';
 
 const thirdDogImage = "https://images.dog.ceo/breeds/affenpinscher/n02110627_7065.jpg";
 const thirdDogName = 'Lana';
-``
+```
 
 En este caso para añadir cada uno de los elementos utilizaremos la propiedad innerHTML y la
 interpolación de cadenas.
@@ -25,5 +25,3 @@ The aim of this exercise is to paint three items in a list. Each of them
 will contain an image. The images and texts will be obtained from the data (above).
 In this case, to add each of the elements we will use the innerHTML property and the
 string interpolation.
-
-```
