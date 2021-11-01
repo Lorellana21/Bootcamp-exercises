@@ -1,6 +1,6 @@
 'use strict';
 
-let number = 5;
+const number = 5;
 
 if (number === 0) {
      console.log('El número es 0')
