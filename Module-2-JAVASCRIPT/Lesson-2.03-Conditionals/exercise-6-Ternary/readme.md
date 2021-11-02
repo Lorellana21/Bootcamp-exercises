@@ -16,4 +16,4 @@ utilizando un ternario en lugar de un `if...else` .
 
 ---
 
-Rewrite the above code using a ternary instead of instead of an `if...else`.
+Rewrite the above code using a ternary instead of an `if...else`.
