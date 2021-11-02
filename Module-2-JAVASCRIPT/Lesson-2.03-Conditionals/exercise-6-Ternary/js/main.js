@@ -17,3 +17,4 @@ let avocados;
 money >= avocadoPrice ? avocados = money / avocadoPrice : avocados = 0;
 
 console.log(avocados)
+
