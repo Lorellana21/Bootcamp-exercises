@@ -27,5 +27,5 @@ The function will have 4 parameters:
 - the third will be a number with the `padding` .
 - the fourth will be a number with the `border-size` .
 
-To test that it works, run the function, collect the result in a variable, and print it out
+To check it, run the function, collect the result in a variable and print it out
 in the console.
