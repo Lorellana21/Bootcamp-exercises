@@ -1,9 +1,7 @@
 ## Calculador de modelo de caja
 
 Como hemos visto en las clases anteriores, en CSS tenemos dos tipos de cálculo para las
-dimensiones de un elemento: `border-box` y `content-box`. Vamos a realizar una calculadora a la
-que le pasaremos 4 parámetros y nos devolverá el ancho del contenido, y el ancho total de la
-caja en una cadena como esta:
+dimensiones de un elemento: `border-box` y `content-box`. Vamos a realizar una calculadora a la que le pasaremos 4 parámetros y nos devolverá el ancho del contenido, y el ancho total de la caja en una cadena como esta:
 `El ancho del contenido es: 30px y el ancho total de la caja es: 34px`
 
 La función tendrá 4 parámetros:
@@ -19,9 +17,7 @@ Para probar que funciona, ejecuta la función recogiendo el resultado en una var
 
 ## Box model calculator
 
-As we have seen in the previous classes, in CSS we have two types of calculation for the
-element dimensions: `border-box` and `content-box`. We are going to make a calculator and
-we'll pass 4 parameters, it will return the width of the content, and the total width of the box in a string like this:
+As we have seen in the previous classes, in CSS we have two types of calculation for the element dimensions: `border-box` and `content-box`. We are going to make a calculator and we'll pass 4 parameters, it will return the width of the content, and the total width of the box in a string like this:
 `The width of the content is: 30px and the total width of the box is: 34px`
 
 The function will have 4 parameters:
