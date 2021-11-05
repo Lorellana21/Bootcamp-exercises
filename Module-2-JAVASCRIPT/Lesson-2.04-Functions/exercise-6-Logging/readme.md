@@ -9,8 +9,9 @@ Vamos a mejorar nuestra función para que nos avise cuando esto ocurre. Dentro d
 
 ```
 No existe ningún elemento con clase, id o tag llamado {aquí-el-nombre-delselector}
-Finalmente tras nuestro condicional retornaremos la constante con el elemento.
 ```
+
+- Finalmente tras nuestro condicional retornaremos la constante con el elemento.
 
 Nota: podemos imprimir/loguear errores con `console.error()` .
 
@@ -25,7 +26,7 @@ We are going to improve our function so that it warns us when this happens. Insi
 - With a conditional we're going to check if the constant has no value, and if it does, we're going to print an error to the console saying:
 
 ```
-There is no element with class, id or tag called {here-elelector-name}.
+There is no element with class, id or tag called {here-seelector-name}.
 ```
 
 - Finally, after our conditional we will return the constant with the element.
