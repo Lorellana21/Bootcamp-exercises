@@ -4,7 +4,7 @@
 function getEl(sel){
   const element = document.querySelector(sel);
   if(element === null){
-   console.log(`No existe ningún elemento con clase, id o tag llamado ${sel}`);
+   console.error(`No existe ningún elemento con clase, id o tag llamado ${sel}`);
   } else if (element !== null) {
     return element;
   }

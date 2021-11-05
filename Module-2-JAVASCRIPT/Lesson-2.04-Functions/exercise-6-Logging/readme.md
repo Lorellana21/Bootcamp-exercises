@@ -31,4 +31,4 @@ There is no element with class, id or tag called {here-seelector-name}.
 
 - Finally, after our conditional we will return the constant with the element.
 
-Note: we can print/log errors with console.error() .
+Note: we can print/log errors with `console.error()` .
