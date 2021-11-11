@@ -1,0 +1,20 @@
+## Investigando los elementos
+
+Vamos a preparar un input de tipo texto, a recogerlo desde JavaScript y a imprimirlo en la consola con `console.dir` para investigarlo y comentar con la compañera estas propiedades:
+
+- value
+- nodeName
+- required
+
+Nota Cuando imprimimos un elemento en la consola con `console.log` vemos la etiqueta de HTML y podemos desplegarla para ver su contenido. Si queremos ver el objeto con sus propiedades y métodos tendremos que usar `console.dir`.
+
+---
+
+## Investigating the elements
+
+Prepare a text input, collect it from JavaScript and print it in the console with ``console.dir`` to investigate it and discuss these properties with your colleague:
+- value
+- nodeName
+- required
+
+Note When we print an element in the console with ``console.log`` we see the HTML tag and we can expand it to see its content. If we want to see the object with its properties and methods we must use ``console.dir``.
