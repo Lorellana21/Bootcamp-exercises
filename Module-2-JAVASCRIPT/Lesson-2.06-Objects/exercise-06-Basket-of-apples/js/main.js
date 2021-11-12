@@ -36,6 +36,7 @@ plus.addEventListener("click", basket.addApple);
 minus.addEventListener("click", basket.restApple);
 reset.addEventListener("click", basket.resetApple);
 
+
 // Other way of doing it:
 
 // const basket = {
