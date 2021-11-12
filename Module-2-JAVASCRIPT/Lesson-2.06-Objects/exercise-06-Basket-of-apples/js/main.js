@@ -12,24 +12,24 @@ basket.min = 0;
 basket.actual = 0;
 basket.initial = 0;
 
-basket.addApple = function (a) {
+basket.addApple = function () {
   if (basket.actual < basket.max) {
     basket.actual += 1;
   }
   totalApples.innerHTML = basket.actual;
 };
 
-basket.restApple = function (a) {
+basket.restApple = function () {
   if (basket.actual > basket.min) {
     basket.actual -= 1;
   }
   totalApples.innerHTML = basket.actual;
 };
 
-basket.resetApple = function (a) {
-  a = basket.initial;
+basket.resetApple = function (reset) {
+  reset = basket.initial;
 
-  totalApples.innerHTML = a;
+  totalApples.innerHTML = reset;
 };
 
 plus.addEventListener("click", basket.addApple);
