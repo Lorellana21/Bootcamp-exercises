@@ -1,65 +1,69 @@
 'use strict';
 
-const adalabers = [
-  {
-    name: 'María',
-    age: '29',
-    job: 'diseñadora'
-  },
-  {
-    name: 'Lucía',
-    age: '31',
-    job: 'ingeniera química'
-  },
-  {
-    name: 'Susana',
-    age: '34',
-    job: 'periodista'
-  },
-  {
-    name: 'Rocío',
-    age: '25',
-    job: 'actriz'
-  },
-  {
-    name: 'Inmaculada',
-    age: '21',
-    job: 'diseñadra'
-  },
-];
+  const adalabers = [
+    { name: 'María', age: 29, job: 'diseñadora' },
+    { name: 'Lucía', age: 31, job: 'ingeniera química' },
+    { name: 'Susana', age: 34, job: 'periodista' },
+    { name: 'Rocío', age: 25, job: 'actriz' },
+    { name: 'Inmaculada', age: 21, job: 'diseñadora' }
+  ];
+
 
 // Devuelve el número de adalabers en el listado.
 function countAdalabers(){
-    // console.log(adalabers.length);
+    return adalabers.length;
 }
-countAdalabers(adalabers);
 
 
 // Devuelve la media de edad de listado
   function averageAge(){
     let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-   sum += arr[i].age;
+    for(const adalaber of adalabers){
+     sum += adalaber.age;
   }
-  console.log(`la media de edad es ${sum} / arr.lenght`);
+  return sum / adalabers.length;
 }
-averageAge(adalabers);
 
-// function theYoungest(){
-//   for(const adalaber of adalabers){
-//     console.log(adalaber.age);
-//     if(adalaber.age <=21){
-//       console.log(adalaber.name)
+//Devuelve el nombre de la más joven:
+function theYoungest(){
+  let youngestName = "";
+  let youngestAge = 100;
+
+  for(const adalaber of adalabers){//Estoy creando la constante "adalaber"
+    // console.log(adalaber.age);
+    if(youngestAge > adalaber.age){
+      // console.log(adalaber);
+      youngestAge = adalaber.age;
+      youngestName = adalaber.name;
+     }
+  }
+  console.log(youngestAge, youngestName);
+}
+
+// Other way of doing it:
+// function theYoungest2(students) {
+//   let youngestStudent = students[0];
+//   for (const student of students) {
+//     if (student.age < youngestStudent.age) {
+//       youngestStudent = student;
 //     }
 //   }
+//   return youngestStudent;
 // }
-// theYoungest(adalabers)
 
+//Devuelve las que son diseñadoras:
 function countDesigners(){
+  let count = 0;
   for(const adalaber of adalabers){
-    if(adalaber.job === "diseñadora"){
-      console.log(adalaber.name);
+    if(adalaber.job === 'diseñadora'){
+      count++
     }
   }
+  return count;
 }
-countDesigners(adalabers);
+
+console.log(countAdalabers(adalabers));
+console.log(averageAge(adalabers));
+console.log(theYoungest(adalabers));
+// console.log(theYoungest2(adalabers));
+console.log(countDesigners(adalabers));
