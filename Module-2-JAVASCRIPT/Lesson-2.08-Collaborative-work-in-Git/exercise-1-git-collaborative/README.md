@@ -1,8 +1,9 @@
 # Git colaborativo
 
 Vamos a hacer unas Pull Request con revisión de código, ¿o qué?
-Partimos de una base, html y css:
-index.html
+Partimos de una base:
+
+index.html:
 
 ```
 <!DOCTYPE html>
@@ -23,7 +24,7 @@ index.html
 </html>
 ```
 
-main.css
+main.css:
 
 ```
 .head {
@@ -47,27 +48,32 @@ Primero hay que crear el repositorio con estos dos archivos, dar permisos a nues
 A continuación hay un listado de ejercicios/tickets que habrá que ir resolviendo. Usaremos lo que hemos visto de PR pasando a dev cada tarea una vez completada. Cuando estén las 3 primeras en dev, haremos una subida a master, también por pull request.
 Si os queréis animar a hacer los tickets 1 y 2 a la vez, cada miembro de la pareja puede ponerse con uno.
 
-Ticket #1: Centrar el careto
+
+
+### Ticket #1: Centrar el careto:
+
 Este señor está como apartado, en una esquina... eso no puede ser, debería estar centrado vertical y horizontalmente en la pantalla.
 
----
 
-Ticket #2: Cara redonda
+
+### Ticket #2: Cara redonda:
+
 Un careto.. ¿es un careto si no es redondo?. Hay que redondear esa cara para que sea un círculo perfecto.
 
----
 
-Ticket #3: Cara Sonriente
+
+### Ticket #3: Cara Sonriente;
+
 ¿No está un poco serio? Hagamos que sonría un poco.
 
----
 
-Ticket #4: Añadir funcionalidad para que guiñe
+
+### Ticket #4: Añadir funcionalidad para que guiñe:
 Sería genial si al hacer click el careto guiñase un ojo. Hay que tener en cuenta que al dejar de hacer hover sobre el careto tiene que volver a la posición inicial.
 
 ---
 
-## git-collaborative
+## Git collaborative
 
 Let's do a Pull Request with code review.
 We start with a base, html and css (above)
@@ -75,20 +81,26 @@ We start with a base, html and css (above)
 First we have to create the repository with these two files, give permissions to our partner and create the master and dev branches.
 Next there is a list of exercises/tickets that we will have to solve.
 
-Ticket #1: Centre the face
+
+
+### Ticket #1: Centre the face:
+
 This man is kind of out of the way, in a corner... that can't be, he should be centred vertically and horizontally on the screen.
 
----
 
-Ticket #2: Round face
+
+### Ticket #2: Round face:
+
 A face... is it a face if it is not round? You have to round that face to make it a perfect circle.
 
----
 
-Ticket #3: Smiley Face
+
+### Ticket #3: Smiley Face:
+
 Isn't he a bit serious? Let's make him smile a little.
 
----
 
-Ticket #4: Add functionality to make it wink
+
+### Ticket #4: Add functionality to make it wink:
+
 It would be great if the face winked when you click on it. Keep in mind that when you stop hovering over the face it has to return to the initial position.
