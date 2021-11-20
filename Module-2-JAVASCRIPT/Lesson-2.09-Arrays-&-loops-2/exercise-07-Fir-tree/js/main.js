@@ -23,4 +23,3 @@ console.log("    " + trunk);
 }
 paintTree(5);
 
-
