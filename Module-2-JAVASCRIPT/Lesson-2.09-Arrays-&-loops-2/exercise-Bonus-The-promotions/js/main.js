@@ -68,5 +68,14 @@ const promos = [
 
 const studentsWorkingInGoogle = ['id-2', 'id-3', 'id-5', 'id-9'];
 
-// TÚ CÓDIGO AQUÍ
+// 1 Pintar en pantalla los nombres de las promos:
 
+const resultElement = document.querySelector ('.js-result');
+
+for ( let i = 0; i < promos.length; i++){
+resultElement.innerHTML += `<ul><li>${promos[i].name}</li></ul>`;
+}
+
+for (const promo of promos){
+  resultElement.innerHTML += promo.name;
+}

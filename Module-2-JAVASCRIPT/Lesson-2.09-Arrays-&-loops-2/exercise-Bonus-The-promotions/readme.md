@@ -7,8 +7,7 @@ Os proponemos unos ejercicios super entrenidos para dominar las estructuras de d
 - Deberíais añadir vuestro código a `main.js`.
 - No es necesario que modifiquéis el fichero `index.html`.
 - Para practicar podéis hacer todos los ejercicios con `for` clásico y luego cambiarlo a `for ... of` para entender la diferencia entre uno y otro.
-- Tenemos un array de promociones, que son objetos, y dentro de cada promoción un array de alumnas, que oh vaya también es un array de objetos. A partir del ejercicio 4 vais a necesitar bucles anidados, es decir, un `for` dentro de otro `for`.
-- Podéis hacer los ejercicios en el orden que queráis. Si alguno os parece muy sencillo os lo podéis saltar.
+- Tenemos un array de promociones, que son objetos, y dentro de cada promoción un array de alumnas, que oh, vaya, también es un array de objetos. A partir del ejercicio 4 vais a necesitar bucles anidados, es decir, un `for` dentro de otro `for`.
 
 Cuando terminéis todos los ejercicios os aseguramos que no habrá estructura de datos que se os resista!!!
 
