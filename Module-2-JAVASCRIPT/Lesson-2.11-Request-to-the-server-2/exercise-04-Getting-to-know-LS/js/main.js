@@ -18,6 +18,11 @@ if(savedName !== ""){
     pElement.innerHTML = savedName;//En el párrafo aparece el valor guardado
 }
 
+/*o también
+const name = localStorage.getItem("name");
+pElement.innerHTML = name;
+*/
+
 
 
 
