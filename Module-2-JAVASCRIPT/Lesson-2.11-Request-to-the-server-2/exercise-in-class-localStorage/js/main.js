@@ -55,6 +55,7 @@ function handlerClick() {
   // ev.preventDefault();
   conectToApi();
 }
+
 /* MAIN */
 //Al hacer click llamo a la función manejadora
 btnElement.addEventListener("click", handlerClick);
