@@ -1,0 +1,10 @@
+.header{
+    background: burlywood;
+      color: white;
+      height: 90px;
+      
+      width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+      left: 0; /* Posicionamos la cabecera al lado izquierdo */
+      top: 0; /* Posicionamos la cabecera pegada arriba */
+      position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+  }
