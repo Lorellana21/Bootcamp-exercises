@@ -29,13 +29,14 @@ const groups = [
 ];
 const ulElement = document.querySelector(".js-list");
 
-/*
+/*Crear un "li":
 const liElement = document.createElement("li");
 const textElement = document.createTextNode("dayana");
 liElement.appendChild(textElement);
 ulElement.appendChild(liElement);
 */
-//Función tipo Arrow
+
+//Función tipo Arrow para crear muchos "li":
 const paintElements = () => {
   for (const group of groups) {
     //bucle
