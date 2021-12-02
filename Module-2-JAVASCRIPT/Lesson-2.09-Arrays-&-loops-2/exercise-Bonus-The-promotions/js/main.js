@@ -88,3 +88,4 @@ for(let i = 0; i < promos.length; i++){
 for(const promo of promos){
   resultElement.innerHTML += `<ul><li>Letra: ${promo.promo}, Nombre: ${promo.name}</li></ul>`;
 }
+
