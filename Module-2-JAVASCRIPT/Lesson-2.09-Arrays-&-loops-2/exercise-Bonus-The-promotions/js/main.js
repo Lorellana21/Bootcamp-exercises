@@ -72,10 +72,19 @@ const studentsWorkingInGoogle = ['id-2', 'id-3', 'id-5', 'id-9'];
 
 const resultElement = document.querySelector ('.js-result');
 
-for ( let i = 0; i < promos.length; i++){
+/*for ( let i = 0; i < promos.length; i++){
 resultElement.innerHTML += `<ul><li>${promos[i].name}</li></ul>`;
 }
 
 for (const promo of promos){
-  resultElement.innerHTML += promo.name;
+  resultElement.innerHTML += `<ul><li>${promo.name}</li></ul>`;
+}*/
+
+//2 Pintar en pantalla las letras y los nombres de las promos
+
+for(let i = 0; i < promos.length; i++){
+  resultElement.innerHTML += `<ul><li>Letra: ${promos[i].promo}, Nombre: ${promos[i].name}</li></ul>`;
+}
+for(const promo of promos){
+  resultElement.innerHTML += `<ul><li>Letra: ${promo.promo}, Nombre: ${promo.name}</li></ul>`;
 }
