@@ -8,3 +8,6 @@
       top: 0; /* Posicionamos la cabecera pegada arriba */
       position: fixed; /* Hacemos que la cabecera tenga una posición fija */
   }
+  .start{
+    margin-top: 100px;
+  }

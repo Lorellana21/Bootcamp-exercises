@@ -7,7 +7,7 @@ Para ello seguimos estos pasos:
 1. Ponemos un atributo `data-id` a los enlaces para indicar a qué elemento debemos hacer scroll
 1. Al hacer click, eliminamos el comportamiento por defecto.
 1. Con [getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) buscamos la posición del elemento en la página.
-1. Usando ][window.scrollTo](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo) hacemos scroll hasta el elemento pero restando alguno píxeles para que la cabecera fija no lo tape.
+1. Usando [window.scrollTo](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo) hacemos scroll hasta el elemento pero restando alguno píxeles para que la cabecera fija no lo tape.
 
 ---
 
