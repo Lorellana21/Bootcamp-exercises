@@ -91,9 +91,18 @@ for(const promo of promos){
 
 //3 Pintar en pantalla las letras de las promos, los nombres de las promos y el número de alumnas
 
-for(let i = 0; i < promos.length; i++){
+/*for(let i = 0; i < promos.length; i++){
   resultElement.innerHTML += `<ul><li>Letra: ${promos[i].promo}, Nombre: ${promos[i].name}, Número de alumnas: ${promos[i].students.length}</li></ul>`;
 }
 for(const promo of promos){
   resultElement.innerHTML += `<ul><li>Letra: ${promo.promo}, Nombre: ${promo.name}, Número de alumnas: ${promo.students.length}</li></ul>`;
+}*/
+
+//4 Pintar en pantalla los nombres de las promos y los nombres y la edad de las alumnas
+
+for(let i = 0; i < promos.length; i++){
+  resultElement.innerHTML += `<ul><li>Nombre promo: ${promos[0].name}, Nombre alumna: ${promos[0].students[i].name}, Edad: ${promos[0].students[i].age}</li></ul>`;
+}
+for(const promo of promos){
+  resultElement.innerHTML += `<ul><li>Nombre: ${promo.name}, Nombre: ${promo.students.name}, Edad: ${promo.students.age}</li></ul>`;
 }
