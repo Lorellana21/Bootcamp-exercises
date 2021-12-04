@@ -68,41 +68,57 @@ const promos = [
 
 const studentsWorkingInGoogle = ['id-2', 'id-3', 'id-5', 'id-9'];
 
-// 1 Pintar en pantalla los nombres de las promos:
+
 
 const resultElement = document.querySelector ('.js-result');
+//Como el ul no se repite, debe ir fuera del bucle.
+let htmlCode = "<ul>";
 
+//1 Pintar en pantalla los nombres de las promos:
+
+//Bucle para recorrer el Array y pintarlo en HTML
 /*for ( let i = 0; i < promos.length; i++){
-resultElement.innerHTML += `<ul><li>${promos[i].name}</li></ul>`;
+  htmlCode += `<li>${promos[i].name}</li>`;
 }
 
 for (const promo of promos){
-  resultElement.innerHTML += `<ul><li>${promo.name}</li></ul>`;
+  htmlCode += `<li>${promo.name}</li>`;
 }*/
+
+
+
 
 //2 Pintar en pantalla las letras y los nombres de las promos
 
 /*for(let i = 0; i < promos.length; i++){
-  resultElement.innerHTML += `<ul><li>Letra: ${promos[i].promo}, Nombre: ${promos[i].name}</li></ul>`;
+  htmlCode += `<li>Letra: ${promos[i].promo}, <br> Nombre: ${promos[i].name}</li>`;
 }
 for(const promo of promos){
-  resultElement.innerHTML += `<ul><li>Letra: ${promo.promo}, Nombre: ${promo.name}</li></ul>`;
+  htmlCode += `<li>Letra: ${promo.promo}, Nombre: ${promo.name}</li>`;
 }*/
+
 
 //3 Pintar en pantalla las letras de las promos, los nombres de las promos y el número de alumnas
 
 /*for(let i = 0; i < promos.length; i++){
-  resultElement.innerHTML += `<ul><li>Letra: ${promos[i].promo}, Nombre: ${promos[i].name}, Número de alumnas: ${promos[i].students.length}</li></ul>`;
+  htmlCode += `<li>Letra: ${promos[i].promo}, Nombre: ${promos[i].name}, Número de alumnas: ${promos[i].students.length}</li>`;
 }
 for(const promo of promos){
-  resultElement.innerHTML += `<ul><li>Letra: ${promo.promo}, Nombre: ${promo.name}, Número de alumnas: ${promo.students.length}</li></ul>`;
+  htmlCode += `<li>Letra: ${promo.promo}, Nombre: ${promo.name}, Número de alumnas: ${promo.students.length}</li>`;
 }*/
 
 //4 Pintar en pantalla los nombres de las promos y los nombres y la edad de las alumnas
 
 for(let i = 0; i < promos.length; i++){
-  resultElement.innerHTML += `<ul><li>Nombre promo: ${promos[0].name}, Nombre alumna: ${promos[0].students[i].name}, Edad: ${promos[0].students[i].age}</li></ul>`;
+  resultElement.innerHTML += `Nombre promos: ${promos[i].name}`;
+  for (let j = 0; j < 100; j++){
+    resultElement.innerHTML += `<p>Nombre alumna: ${promos[i].students[j].name}, Edad: ${promos[i].students[j].age}</p>`;
+
+  }
 }
-for(const promo of promos){
-  resultElement.innerHTML += `<ul><li>Nombre: ${promo.name}, Nombre: ${promo.students.name}, Edad: ${promo.students.age}</li></ul>`;
-}
+  
+  
+
+htmlCode += "</ul>";
+resultElement.innerHTML = htmlCode;
+  
