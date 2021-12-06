@@ -86,8 +86,6 @@ for (const promo of promos){
 }*/
 
 
-
-
 //2 Pintar en pantalla las letras y los nombres de las promos
 
 /*for(let i = 0; i < promos.length; i++){
@@ -109,14 +107,12 @@ for(const promo of promos){
 
 //4 Pintar en pantalla los nombres de las promos y los nombres y la edad de las alumnas
 
-for(let i = 0; i < promos.length; i++){
-  resultElement.innerHTML += `Nombre promos: ${promos[i].name}`;
-  for (let j = 0; j < 100; j++){
-    resultElement.innerHTML += `<p>Nombre alumna: ${promos[i].students[j].name}, Edad: ${promos[i].students[j].age}</p>`;
-
+for (let i = 0; i < promos.length; i++) {
+  for (let j = 0; j < promos[i].students.length; j++) {
+    htmlCode += `<li>${promos[i].students[j].name} es de la promo ${promos[i].name} y tiene ${promos[i].students[j].age} años</li>`;
   }
 }
-  
+
   
 
 htmlCode += "</ul>";
