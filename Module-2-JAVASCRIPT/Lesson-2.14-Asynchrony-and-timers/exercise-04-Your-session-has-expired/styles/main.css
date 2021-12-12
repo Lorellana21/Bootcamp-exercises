@@ -1,0 +1,14 @@
+.message {
+    height: 200px; 
+    width: 300px;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.hidden{
+    display: none;
+
+}
