@@ -115,11 +115,26 @@ for(const promo of promos){
 
 //5 Pintar en pantalla los nombres de las promos y los nombres, la edad y el id de las alumnas
 
-for (let i = 0; i < promos.length; i++) {
+/*for (let i = 0; i < promos.length; i++) {
   for (let j = 0; j < promos[i].students.length; j++) {
     htmlCode += `<li><p ${promos[i].students[j].id}>${promos[i].students[j].name} es de la promo ${promos[i].name} y tiene ${promos[i].students[j].age} años</li>`;
   }
+}*/
+
+//6 Pintar en pantalla los nombres de las promos y los nombres, la edad y el id de las alumnas que tenga edad par
+
+
+  for (let i = 0; i < promos.length; i++) {
+      for (let j = 0; j < promos[i].students.length; j++) {
+        if(promos[i].students[j].age %2 === 0){
+          htmlCode += `<li><p ${promos[i].students[j].id}>${promos[i].students[j].name} es de la promo ${promos[i].name} y tiene ${promos[i].students[j].age} años</li>`;
+        }
+      }
 }
+
+
+
+
 
 htmlCode += "</ul>";
 resultElement.innerHTML = htmlCode;
