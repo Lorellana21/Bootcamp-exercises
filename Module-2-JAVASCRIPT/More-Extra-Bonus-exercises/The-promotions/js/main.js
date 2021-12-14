@@ -70,6 +70,7 @@ const studentsWorkingInGoogle = ['id-2', 'id-3', 'id-5', 'id-9'];
 
 
 
+
 const resultElement = document.querySelector ('.js-result');
 //Como el ul no se repite, debe ir fuera del bucle.
 let htmlCode = "<ul>";
@@ -124,16 +125,27 @@ for(const promo of promos){
 //6 Pintar en pantalla los nombres de las promos y los nombres, la edad y el id de las alumnas que tenga edad par
 
 
-  for (let i = 0; i < promos.length; i++) {
+  /*for (let i = 0; i < promos.length; i++) {
       for (let j = 0; j < promos[i].students.length; j++) {
         if(promos[i].students[j].age %2 === 0){
           htmlCode += `<li><p ${promos[i].students[j].id}>${promos[i].students[j].name} es de la promo ${promos[i].name} y tiene ${promos[i].students[j].age} años</li>`;
         }
       }
+}*/
+
+//7 Pintar en pantalla los nombres de las promos y los nombres la edad y el id de las alumnas que trabajan en Google
+//Para ello antes de pintar a una alumna tendréis que comprobar si su `id` está en `studentsWorkingInGoogle`.
+
+
+for (let i = 0; i < promos.length; i++) {
+  for (let j = 0; j < promos[i].students.length; j++) {
+    for(let f = 0; f < studentsWorkingInGoogle.length; f++){
+    if(promos[i].students[j].id === studentsWorkingInGoogle[f]){
+      htmlCode += `<li><p ${promos[i].students[j].id}>${promos[i].students[j].name} es de la promo ${promos[i].name} y tiene ${promos[i].students[j].age} años</li>`;
+    }
+  }
 }
-
-
-
+}
 
 
 htmlCode += "</ul>";
