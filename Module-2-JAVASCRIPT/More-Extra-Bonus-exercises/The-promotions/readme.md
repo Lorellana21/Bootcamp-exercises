@@ -244,18 +244,3 @@ Para ello antes de pintar a una alumna tendréis que comprobar si su `id` está 
 
 Para hacer esto hay varias formas pero la mejor es escuchar un click sobre el div que lo recubre todo y trabajar con el evento. Al escuchar un evento sobre un elemento que recubre los que nos interesa estamos haciendo [Event delegation](https://books.adalab.es/materiales-front-end-h/modulo-2.-programando-la-web/2_5_eventos#ejercicio-12-bonus).
 
-Os damos unas pistas:
-
-```js
-const resultElement = document.querySelector(".js-result");
-
-const logStudentId = function (ev) {
-  console.log("Current target:", ev.currentTarget);
-  console.log("Target:", ev.target);
-  debugger;
-  // coger el id del evento ev.target o del ev.currentTarget
-  // y luego pintarlo en consola
-};
-
-resultElement.addEventListener("click", logStudentId);
-```

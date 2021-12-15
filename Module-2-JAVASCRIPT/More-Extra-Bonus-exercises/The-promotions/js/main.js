@@ -137,17 +137,35 @@ for(const promo of promos){
 //Para ello antes de pintar a una alumna tendréis que comprobar si su `id` está en `studentsWorkingInGoogle`.
 
 
+// for (let i = 0; i < promos.length; i++) {
+//   for (let j = 0; j < promos[i].students.length; j++) {
+//     for(let f = 0; f < studentsWorkingInGoogle.length; f++){
+//     if(promos[i].students[j].id === studentsWorkingInGoogle[f]){
+//       htmlCode += `<li><p ${promos[i].students[j].id}>${promos[i].students[j].name} es de la promo ${promos[i].name} y tiene ${promos[i].students[j].age} años</li>`;
+//     }
+//   }
+// }
+// }
+
+//8 Pintar en pantalla los nombres de las promos y los nombres, la edad, el id de las alumnas y pintar el id de la alumna en consola cuando se haga click en una de ellas
+
 for (let i = 0; i < promos.length; i++) {
   for (let j = 0; j < promos[i].students.length; j++) {
-    for(let f = 0; f < studentsWorkingInGoogle.length; f++){
-    if(promos[i].students[j].id === studentsWorkingInGoogle[f]){
-      htmlCode += `<li><p ${promos[i].students[j].id}>${promos[i].students[j].name} es de la promo ${promos[i].name} y tiene ${promos[i].students[j].age} años</li>`;
-    }
+    htmlCode += `<li><p ${promos[i].students[j].id}>${promos[i].students[j].name} es de la promo ${promos[i].name} y tiene ${promos[i].students[j].age} años</li>`;
   }
 }
-}
 
+const logStudentId = function (ev) {
+  console.log("Current target:", ev.currentTarget);
+  console.log("Target:", ev.target);
+  // coger el id del evento ev.target o del ev.currentTarget
+  // y luego pintarlo en consola
+};
 
 htmlCode += "</ul>";
 resultElement.innerHTML = htmlCode;
+
+resultElement.addEventListener("click", logStudentId);
+
+
   
