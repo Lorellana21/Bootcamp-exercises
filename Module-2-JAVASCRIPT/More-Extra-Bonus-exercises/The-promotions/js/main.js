@@ -124,7 +124,6 @@ for(const promo of promos){
 
 //6 Pintar en pantalla los nombres de las promos y los nombres, la edad y el id de las alumnas que tenga edad par
 
-
   /*for (let i = 0; i < promos.length; i++) {
       for (let j = 0; j < promos[i].students.length; j++) {
         if(promos[i].students[j].age %2 === 0){
