@@ -8,9 +8,7 @@ Make a function that writes `potato` 10 times in the console, the function will 
 
 ### Phase 2
 
-Now we have a function that writes potato 10 times in the console every time we call it, but that is not very useful because now that I know I can write a word 10 times in the console what I would like is to write different words.
-
-So, let's modify our `ten()` function to accept a `word` parameter, and we're going to call the function 3 times, passing it a different word each time:
+Now I would like to write different words. So, let's modify our `ten()` function to accept a `word` parameter, and we're going to call the function 3 times, passing it a different word each time:
 
 ```
 ten('Potato`);
@@ -20,16 +18,13 @@ ten('Pizza');
 
 ### Phase 3
 
-If I can pass the word I want to write to my function, I want more: right now if I pass it a word, it writes it 10 times, but what if I want it to write it a different number of times each time?
-
-What would I have to do so that when I call my function in these ways it would write the words the number of times I tell it to?
+I want more: what if I want to write a different number of times each time? When I call my function in these ways it would write the words the number of times I wish:
 
 ```
 ten('potato', 10);
 ten('avocado', 7);
 ten('Pizza', 50);
 ```
-
 Once this is done, we will rename the function `ten` to `writeThis`;
 
 ### Phase 4
