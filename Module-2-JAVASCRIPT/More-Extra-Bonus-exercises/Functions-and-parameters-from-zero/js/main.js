@@ -11,9 +11,21 @@
 
 //2: modify our `ten()` function to accept a `word` parameter, and we're going to call the function 3 times, passing it a different word each time:
 
-function ten(word){
-    console.log(word);
+// function ten(word){
+//     console.log(word);
+// }
+// ten("potato")
+// ten("Avocado")
+// ten("Pizza")
+
+//3: write a different number of times each time. 
+
+function writeThis(word, number){
+    for (let i = 0; i < number; i++) {
+              console.log(word);
+            }
 }
-ten("potato")
-ten("Avocado")
-ten("Pizza")
+writeThis('potato', 10);
+writeThis('avocado', 7);
+writeThis('Pizza', 50);
+
