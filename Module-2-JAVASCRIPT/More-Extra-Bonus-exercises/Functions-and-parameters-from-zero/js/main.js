@@ -20,12 +20,27 @@
 
 //3: write a different number of times each time. 
 
-function writeThis(word, number){
-    for (let i = 0; i < number; i++) {
-              console.log(word);
-            }
-}
-writeThis('potato', 10);
-writeThis('avocado', 7);
-writeThis('Pizza', 50);
+// function writeThis(word, number){
+//     for (let i = 0; i < number; i++) {
+//               console.log(word);
+//             }
+// }
+// writeThis('potato', 10);
+// writeThis('avocado', 7);
+// writeThis('Pizza', 50);
 
+//4: write the words we pass it a random number of times from 0 to 10
+
+function writeThis(word, getRandomNumber){
+  for (let i = 0; i < getRandomNumber ; i++) {
+    console.log(word);
+  }
+
+}
+function getRandomNumber(max) {
+return Math.ceil(Math.random() * max);
+}
+
+writeThis('potato', getRandomNumber(10));
+writeThis('avocado', getRandomNumber(10));
+writeThis('pizza', getRandomNumber(10));
