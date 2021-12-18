@@ -19,9 +19,7 @@ const getPrincess = () => {
   .then(data => {
     
     for (const princess of data){
-        list.innerHTML += `<li>${princess.name}</li>`
-        list.innerHTML += `<li>${princess.comment}</li>`
-        list.innerHTML += `<img src="${princess.picture}" alt="${princess.name}"></img>`
+        list.innerHTML += `<li><h2>${princess.name}</h2><br><p>${princess.comment}</p> <br><img src="${princess.picture}" alt="${princess.name}"></li>`
     }
   })
 
