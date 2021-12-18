@@ -67,11 +67,26 @@ total: 4
 ];
 
 function writeMyArray(arr){
-  for(let i = 0; i < 4; i++){
-    const text = arr[i].text;
-    const total = arr[i].total;
-    console.log(writeThis(text, total));
+  for(let i = 0; i < arr.length; i++){
+    let text = arr[i].text;
+    let total = arr[i].total;
+    writeThis(text, total);
   }
 
 } 
 writeMyArray(myWordList);
+
+ //6:
+
+ function getInfoFromApi(){
+   fetch ("https://beta.adalab.es/ejercicios-extra/js-funciones-y-parametros-desde-cero/data.json")
+   .then(response => response.json())
+  .then(data => {
+    const arrayServer = data.results;
+    writeMyArray(arrayServer);
+  })
+ }
+
+ getInfoFromApi();
+
+ 

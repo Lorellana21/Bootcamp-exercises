@@ -25,6 +25,7 @@ ten('potato', 10);
 ten('avocado', 7);
 ten('Pizza', 50);
 ```
+
 Once this is done, we will rename the function `ten` to `writeThis`;
 
 ### Phase 4
@@ -86,6 +87,6 @@ To do this we will create a new function `writeMyArray` that will accept an arra
 
 Now that we have achieved that, a colleague appears and tells us: hey, if you can do that, I have an API that returns something very similar, I could pass you the url so that instead of pulling an array put in fire and brimstone in the code, we could pull the data returned by a server. ok?
 
-URL: [https://beta.adalab.es/ejercicios-extra/js-funciones-y-parametros-desde-cero/data.json](https://beta.adalab.es/ejercicios-extra/js-funciones-y-parametros-desde-cero/data.json)
+URL: [data.json](https://beta.adalab.es/ejercicios-extra/js-funciones-y-parametros-desde-cero/data.json)
 
-For this we need to know how to use [fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
+For this we need to know how to use **Fetch**
