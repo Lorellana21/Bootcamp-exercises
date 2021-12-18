@@ -1,6 +1,6 @@
 'use strict';
 
-//1: a function that writes `potato` 10 times in the console, the function will be called `ten()`
+//1
 
 function ten() {
     for (let i = 0; i < 10; i++) {
@@ -9,7 +9,7 @@ function ten() {
   }
   ten();
 
-//2: modify our `ten()` function to accept a `word` parameter, and we're going to call the function 3 times, passing it a different word each time:
+//2
 
 function ten(word){
     console.log(word);
@@ -18,7 +18,7 @@ ten("potato")
 ten("Avocado")
 ten("Pizza")
 
-//3: write a different number of times each time. 
+//3
 
 function writeThis(word, number){
     for (let i = 0; i < number; i++) {
@@ -29,7 +29,7 @@ writeThis('potato', 10);
 writeThis('avocado', 7);
 writeThis('Pizza', 50);
 
-//4: write the words we pass it a random number of times from 0 to 10
+//4
 
 function writeThis(word, getRandomNumber){
   for (let i = 0; i < getRandomNumber ; i++) {
@@ -45,7 +45,7 @@ writeThis('potato', getRandomNumber(10));
 writeThis('avocado', getRandomNumber(10));
 writeThis('pizza', getRandomNumber(10));
 
-//5: a list of words and numbers.
+//5
 
 const myWordList = [
 {
@@ -76,8 +76,8 @@ function writeMyArray(arr){
 } 
 writeMyArray(myWordList);
 
- //6:
-
+ //6
+ 
  function getInfoFromApi(){
    fetch ("https://beta.adalab.es/ejercicios-extra/js-funciones-y-parametros-desde-cero/data.json")
    .then(response => response.json())
