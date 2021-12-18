@@ -12,7 +12,7 @@ Our client has given us a URL from which we must extract the data, as they have 
 
 By clicking on a princess we can change the background to light blue to mark her as our friend.
 
-We will extract the data from the following [URL]('https://beta.adalab.es/ejercicios-extra/js-fetch-arrays-princesas-disney/data/users.json') Example of object coming from the server:
+We will extract the data from the following [URL](https://beta.adalab.es/ejercicios-extra/js-fetch-arrays-princesas-disney/data/users.json) Example of object coming from the server:
 
 ```
 {
