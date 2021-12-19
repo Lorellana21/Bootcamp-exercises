@@ -22,8 +22,16 @@ const getPrincess = () => {
         list.innerHTML += `<li><h2>${princess.name}</h2><br><p>${princess.comment}</p> <br><img src="${princess.picture}" alt="${princess.name}"></li>`
     }
   })
-
 }
+
+function paintBackground(){
+  console.log(event.currentTarget);
+  const selectedPrincess = event.target;
+  selectedPrincess.classList.add("lightBlue");
+}
+
+
+list.addEventListener("click", paintBackground);
 
 
 getPrincess();

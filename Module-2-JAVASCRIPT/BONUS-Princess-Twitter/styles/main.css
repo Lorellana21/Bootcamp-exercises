@@ -7,10 +7,16 @@
   body {
     font-family: 'Noto Sans', sans-serif;
   }
-  li{
+  .list{
     width: 600px;
-    height: 200px;
+    height: auto;
     border: 2px solid black;
     margin-left: 20px;
     list-style: none;
+  }
+  li{
+    border: 2px solid black;
+  }
+  .lightBlue{
+background-color: aqua;
   }
