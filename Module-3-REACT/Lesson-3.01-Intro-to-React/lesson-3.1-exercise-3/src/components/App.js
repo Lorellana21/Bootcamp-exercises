@@ -1,7 +1,6 @@
 import React from "react";
 import "../stylesheets/App.css";
 
-//Tenemos un objeto data que contiene la siguiente información:
 const data = {
   image:
     "https://ucarecdn.com/f8cf81eb-3bab-4bba-9431-668884eab174/-/resize/300x/",
@@ -14,8 +13,6 @@ const data = {
     label: "Go to wikipedia",
   },
 };
-
-//Usa la información contenida en data para renderizar la tarjeta utilizada anteriormente, por ejemplo: El título de la tarjeta sería el data.cardTitle, etc.
 
 const Header = (
   <header className="App-header">
