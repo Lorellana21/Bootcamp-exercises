@@ -1,15 +1,12 @@
-import React, { Component } from "react";
 import "../stylesheets/App.css";
-import CatList from "./CatList";
+import CatList from "../components/CatList";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <CatList />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <CatList />
+    </div>
+  );
 }
 
 export default App;

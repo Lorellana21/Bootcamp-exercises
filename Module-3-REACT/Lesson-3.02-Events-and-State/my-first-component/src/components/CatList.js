@@ -1,5 +1,5 @@
 import React from "react";
-import RandomCat from "./RandomCat";
+import RandomCat from "./Randomcat";
 
 // ...
 class CatList extends React.Component {
@@ -9,10 +9,10 @@ class CatList extends React.Component {
         <h1>All Cats Are Beautiful</h1>
         <ul className="section-cats_list">
           <li>
-            <RandomCat />
+            <RandomCat width={200} height={200} />
           </li>
           <li>
-            <RandomCat />
+            <RandomCat width={200} height={400} />
           </li>
           <li>
             <RandomCat />
