@@ -1,4 +1,4 @@
-# ERes un bot o una persona
+# Eres un bot o una persona
 
 Te habrá pasado muchas veces que cuando te registras en una página te aparece un componente para comprobar si eres una persona o un bot. Ese componente nos hace una pregunta que en teoría solo un ser humano podría responder bien. Vamos a programarlo:
 
