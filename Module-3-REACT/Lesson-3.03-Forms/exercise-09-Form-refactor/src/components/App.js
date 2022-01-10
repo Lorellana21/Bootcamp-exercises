@@ -65,5 +65,3 @@ class MovieForm extends React.Component {
   }
 }
 export default MovieForm;
-
-// Refactorizar el código del ejercicio anterior: usaremos una única función escuchadora para el evento change de cada campo. Para eso, recordad que podemos acceder a la clave de un objeto cuyo nombre tenemos en una variable usando el operador [key] siendo key la variable que tiene el nombre de un campo del objeto.
