@@ -1,6 +1,6 @@
 # Traductor MIMIMI
 
-¿No te ha pasado nunca que has dicho algo y se han burlado de vosotras con un MIMIMI?
+¿No te ha pasado nunca que has dicho algo y se han burlado de ti con un MIMIMI?
 
 - "Al final de esa línea te falta un punto y coma."
 - "Il finil di isi linii ti filti in pinti y cimi."
