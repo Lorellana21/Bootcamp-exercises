@@ -1,4 +1,4 @@
-# # Concebollistas controlados
+# Concebollistas controlados
 
 Partiendo del ejercicio de bot vs persona concebollista vamos a controlar los inputs del componente.
 
