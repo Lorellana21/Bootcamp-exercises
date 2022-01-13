@@ -13,23 +13,32 @@ const App = () => {
 
   // Función manejadora que se ejecuta cuando la usuaria pulsa en una tarea
   const handleClick = (ev) => {
+    //debugger;
     // Obtener el índice de la tarea clickada.
+    const clickedTaskId = ev.currentTarget.id;
+    console.log(clickedTaskId);
+    // Buscamos la tarea pulsada
+    const clickedTask = tasks.find(
+      (task) => task.id === parseInt(clickedTaskId)
+    );
+    //console.log(clickedTask);
     // Invertir la propiedad `completed` de la tarea clickada.
+    clickedTask.completed = !clickedTask.completed;
+
     // Guardar en el estado el array modificado.
-    debugger;
+    setTasks([...tasks]);
   };
 
-  const renderTasks = (i) => {
-    return tasks.map((task) => {
+  const renderTasks = () => {
+    return tasks.map((task, index) => {
       return (
         // Renderizamos cada tarea añdiendo el atributo id
-        <li
-          key={i}
-          id={i}
-          className={task.completed === true ? "done" : ""}
-          onClick={handleClick}
-        >
+        <li key={index} id={index} onClick={handleClick}>
           <h2>{task.task}</h2>
+          <p>
+            La tarea está:
+            {task.completed === true ? "Completada" : "por hacer"}
+          </p>
         </li>
       );
     });
@@ -37,7 +46,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Lista de series favoritas:</h1>
+      <h1>Lista de tareas:</h1>
       <ul>{renderTasks()}</ul>
     </div>
   );
