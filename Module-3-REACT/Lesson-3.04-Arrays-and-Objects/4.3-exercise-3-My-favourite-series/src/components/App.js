@@ -19,7 +19,8 @@ const App = () => {
     const foundSerie = series.find((serie) => serie.id === clickedSerieId);
     foundSerie.isFavorite = !foundSerie.isFavorite;
     setFavorites([...favorites]);
-    console.log(favorites);
+    // console.log(favorites);
+    // console.log(series);
   };
 
   const handleSearchName = (ev) => {
