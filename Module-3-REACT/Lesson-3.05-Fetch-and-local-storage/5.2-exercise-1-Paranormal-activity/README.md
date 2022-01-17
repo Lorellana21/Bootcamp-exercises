@@ -13,7 +13,7 @@ Vamos a probarlo:
    - No hace falta que pintes en pantalla la respuesta del API porque no nos interesa para este ejercicio.
 4. Mira DevTools > Network y verás que hay una actividad para anormal.
 
-¿Sabrías decir por qué pasa esto porque se llama repetidas veces al API? Sí, no... Queremos solucionarlo para que solo se llame al API una vez. Para ello.
+¿Sabrías decir por qué pasa esto? ¿porque se llama repetidas veces al API? Sí, no... Queremos solucionarlo para que solo se llame al API una vez. Para ello.
 
 1. Revisa la mini lección en la que explicamos para qué es el segundo parámetro del `useEffect`.
 2. Comprueba en DevTools > Network que al refrescar la página solo se llama una vez al API.
