@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import ls from "../services/localStorage";
+import { useState } from "react";
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -11,23 +10,30 @@ const App = () => {
       completed: false,
     },
   ]);
+  const [newTaskInput, setNewTaskInput] = useState("");
 
-  // Función manejadora que se ejecuta cuando la usuaria pulsa en una tarea
   const handleClick = (ev) => {
-    //debugger;
-    // Obtener el índice de la tarea clickada.
     const clickedTaskId = ev.currentTarget.id;
     console.log(clickedTaskId);
-    // Buscamos la tarea pulsada
+
     const clickedTask = tasks.find(
       (task) => task.id === parseInt(clickedTaskId)
     );
-    //console.log(clickedTask);
-    // Invertir la propiedad `completed` de la tarea clickada.
     clickedTask.completed = !clickedTask.completed;
 
-    // Guardar en el estado el array modificado.
     setTasks([...tasks]);
+  };
+  const handleNewTask = (ev) => {
+    setNewTaskInput(ev.target.value);
+  };
+  const handleButton = (ev) => {
+    ev.preventDefault();
+    tasks.push({
+      task: newTaskInput,
+      completed: false,
+    });
+    setTasks([...tasks]);
+    setNewTaskInput("");
   };
 
   const renderTasks = () => {
@@ -49,6 +55,21 @@ const App = () => {
     <div>
       <h1>Lista de tareas:</h1>
       <ul>{renderTasks()}</ul>
+
+      <form>
+        <label htmlFor="newTask">Añade una nueva tarea:</label>
+
+        <input
+          type="newTask"
+          name="newTask"
+          id="newTask"
+          value={newTaskInput}
+          onChange={handleNewTask}
+        />
+        <button className="form__btn" onClick={handleButton}>
+          Crear nueva tarea
+        </button>
+      </form>
     </div>
   );
 };
