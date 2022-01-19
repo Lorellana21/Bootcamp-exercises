@@ -12,7 +12,7 @@ Supongamos que la usuaria quiere borrar alguna de las tareas del ToDo list. Para
 
 ---
 
-# Adding new tasks to the ToDo list
+# Delete tasks to the ToDo list
 
 Suppose that the user wants to delete some of the tasks in the ToDo List. To do this we have to put a delete button (or icon) to the right of each task.
 
