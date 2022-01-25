@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/App.css";
+import "../styles/App.scss";
 import SheepCounter from "./SheepCounter";
 
 class App extends React.Component {

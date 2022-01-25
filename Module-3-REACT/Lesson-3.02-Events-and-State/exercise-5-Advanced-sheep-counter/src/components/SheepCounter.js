@@ -22,6 +22,7 @@ class SheepCounter extends React.Component {
     const result = [];
     for (let index = 0; index < this.state.counter; index++) {
       result.push(<li key={index}> Oveja {index + 1}</li>);
+      console.log(result);
     }
     return (
       <div className="content">
@@ -29,7 +30,7 @@ class SheepCounter extends React.Component {
         <button onClick={this.handleClick} className="button">
           Add a Sheep
         </button>
-        <ul>{this.state.result}</ul>
+        <ul>{result}</ul>
       </div>
     );
   }
