@@ -23,7 +23,6 @@ class App extends React.Component {
       <div>
         <h1>Lifting en React con dos niveles</h1>
         <h2>Y con componentes de clase</h2>
-        onC
         <form>
           <Input
             labelText="Escribe tu email"

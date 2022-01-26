@@ -24,7 +24,7 @@ class Input extends React.Component {
   render() {
     return (
       <div className="border--medium">
-        <p>Este es componente hija</p>
+        <p>Este es el componente hija</p>
         <label className="form__label" htmlFor="email">
           {this.props.labelText}
         </label>
