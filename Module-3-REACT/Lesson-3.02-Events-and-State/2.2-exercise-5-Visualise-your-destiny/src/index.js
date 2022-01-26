@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Destiny from "./components/Destiny";
 import "./styles/App.scss";
+import App from "./components/App";
+import React from "react"; //importar la librería de react
+import ReactDOM from "react-dom"; //importar react-dom para que react genere el html
 
 ReactDOM.render(
   <React.StrictMode>
-    <Destiny />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
