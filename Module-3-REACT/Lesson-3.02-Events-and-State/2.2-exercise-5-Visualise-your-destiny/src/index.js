@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./stylesheets/index.css";
-import App from "./components/App.js";
+import Destiny from "./components/Destiny";
+import "./styles/App.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Destiny />
   </React.StrictMode>,
   document.getElementById("root")
 );
