@@ -2,9 +2,7 @@ import React from "react";
 import Item from "./Item";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   render() {
     const items = [
       {
@@ -29,18 +27,19 @@ class App extends React.Component {
       },
     ];
 
-    const filterItems = items.filter((item) => {
-      return item.quantity === 2;
-    });
-    const result = filterItems.map((item) => {
-      return (
-        <li>
-          <Item nombre={item.name} precio={item.price} />
-        </li>
-      );
-    });
-    return <ul> {result} </ul>;
+
+    const result = items
+      .filter((item) => {
+        return (item.quantity === 2)
+      })
+      .map(item => {
+        return (
+          <li>
+            <Item nombre={item.name} precio={item.price} />
+          </li>
+        )
+      })
+    return (<ul> {result} </ul>);
   }
 }
-
 export default App;
