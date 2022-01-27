@@ -3,7 +3,7 @@ import React from "react";
 class CityImage extends React.Component {
   constructor(props) {
     super(props);
-    this.cities = {
+    this.cities = {//Esta es mi variable donde tengo índice = valor
       Praga:
         "https://d2bgjx2gb489de.cloudfront.net/gbb-blogs/wp-content/uploads/2018/03/17111740/Prague-city-skyline-and-Charles-Bridge-92523139-870x400.jpg",
       Boston:
@@ -17,13 +17,15 @@ class CityImage extends React.Component {
     };
   }
   render() {
-    const city = this.props.city;
-    const imageCity = this.cities[city];
+    // const index = this.props.city;
+    // const imageCity = this.cities[index];
 
     return (
       <>
-        <p>Tu destino es viajar a {city}</p>
-        <img className="image" src={imageCity} alt={city} />
+        <p>Tu destino es viajar a {this.props.city}</p>
+        {/*Aqui me va a retornar la ciudad que me pase mi padre, que viene por props,la va abuscar en mi arreglo(this.cities)*/}
+        <img className="image" src={this.cities[this.props.city]} alt={this.props.city} />
+        {/* <img className="image" src={imageCity} alt={city} /> */}
       </>
     );
   }
