@@ -1,0 +1,8 @@
+[
+  {"id":100,"name":"Rubia","kind":"perro"},
+  {"id":105,"name":"Elfo","kind":"gato"},
+  {"id":120,"name":"Rasputin","kind":"perro"},
+  {"id":134,"name":"Bimba","kind":"perro"},
+  {"id":167,"name":"Tarzan","kind":"Unicornio"},
+  {"id":182,"name":"React","kind":"Tiburón"}
+]
