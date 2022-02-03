@@ -1,7 +1,5 @@
 # Formulario y preview de un email:
 
-![]("./images/i.jpg")
-
 ![](https://774018087-files.gitbook.io/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-MdR67vc7P9nPSm8gsCY%2Fsync%2F26160e5efe8d6e72b28567a80d012c1477fe28d4.png?generation=1631780516857965&alt=media)
 
 1. El componente `App` le pasa por pros a `Form` la función `udpateEmail`:
