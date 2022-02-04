@@ -1,18 +1,19 @@
 import { useState } from "react";
+import InputGroupCheck from "./InputGroupCheck";
 import InputGroupRadio from "./InputGroupRadio";
 import InputGroupSelect from "./InputGroupSelect";
 import InputGroupText from "./InputGroupText";
 import Preview from "./Preview";
 
 const App = () => {
-  // Estados del componente
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [region, setRegion] = useState("España peninsular"); // Iniciamos el componente con la primera opción del select
   const [paymentType, setPaymentType] = useState("");
   const [legalTerms, setLegalTerms] = useState(false);
 
-  // Eventos
+
   const handleName = (value) => {
     //debugger;
     setName(value);
@@ -30,13 +31,13 @@ const App = () => {
     setPaymentType(value);
   };
 
-  const handleLegalTerms = (ev) => {
-    // Como lo que nos interesa es si está activo o no guardamos el checked
-    setLegalTerms(ev.target.checked);
+  const handleLegalTerms = (checked) => {
+
+    setLegalTerms(checked);
   };
 
   const handleResetButton = () => {
-    // Ponemos los mismo valores que hemos usado arriba en los useState
+
     setName("");
     setEmail("");
     setRegion("España peninsular");
@@ -50,8 +51,7 @@ const App = () => {
   };
 
   const isValidForm = () => {
-    // El formulario solo es válido cuando los inputs de tipo texto no estén vacíos, cuando se haya marcado una tipo de pago y cuando los términos legales sean true
-    // También podríamos comprobar que el email tiene el formato correcto, pero no queremos complicar este ejemplo
+
     if (
       name !== "" &&
       email !== "" &&
@@ -69,6 +69,7 @@ const App = () => {
       <form className="form" onSubmit={handleForm}>
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
+
           {/* name */}
           <InputGroupText
             labelText="Escribe un nombre:"
@@ -136,21 +137,15 @@ const App = () => {
             handleChange={handlePaymentType}
           />
 
-
           {/* legal terms */}
-          <div className="input-group-checkbox">
-            <label className="label-check" htmlFor="legalTerms">
-              Debes aceptar nuestros términos legales para completar la compra:
-            </label>
-            {/* Este radio solo debe aparecer activo cuando legalTerms sea true */}
-            <input
-              type="checkbox"
-              name="legalTerms"
-              id="legalTerms"
-              checked={legalTerms}
-              onChange={handleLegalTerms}
-            />
-          </div>
+          <InputGroupCheck
+            labelText="Debes aceptar nuestros términos legales para completar la compra:"
+            inputName="legalTerms"
+            inputId="legalTerms"
+            inputChecked={legalTerms}
+            handleChange={handleLegalTerms}
+          />
+
         </div>
 
         <Preview

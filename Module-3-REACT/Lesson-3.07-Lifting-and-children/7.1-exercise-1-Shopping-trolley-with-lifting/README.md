@@ -347,17 +347,21 @@ Crea este componente y mueve el código de la tarjeta de crédito. Queremos que 
 ---
 
 **Ejericico 7. Crear el componente InputGroupCheck**
-Seguimos para bingo y tenemos que hacer más de lo mismo, esta vez con el checkbox de los términos legales. Ya sabes, crea un componente nuevo, mueve el código, pásale props, pásale la función de lifting, refactoriza un poco la función handleLegalTerms de App...
+
+Crea un componente nuevo, esta vez con el checkbox de los términos legales, mueve el código, pásale props, pásale la función de lifting, refactoriza un poco la función `handleLegalTerms` de `App`...
 
 ---
 
 **Ejericio 8. Crear más componentes**
 Aún quedarían un par de componentes más por crear como son el botón de Enviar y el de Limpiar el formulario. Crea los correspondientes componentes para estos botones.
-Aunque uno sea un input de tipo submit y el otro un button, si quieres puedes usar un único componente para ambos:
-Crea el componente Button.
-Mueve el código del botón "Limpiar el formulario" dentro de este componente.
-Pásale las props y la función para hacer lifting.
-Reutilizalo para el botón de Enviar.
-No pasa nada porque a partir de ahora el botón de Enviar no sea un input de tipo submit y sea un button siempre y cuando la página siga funcionando igual.
+
+Aunque uno sea un input de tipo `submit` y el otro un `button`, si quieres puedes usar un único componente para ambos:
+
+1. Crea el componente `Button`.
+1. Mueve el código del botón "Limpiar el formulario" dentro de este componente.
+1. Pásale las props y la función para hacer lifting.
+1. Reutilizalo para el botón de Enviar.
+
+- No pasa nada porque a partir de ahora el botón de Enviar no sea un input de tipo submit y sea un button siempre y cuando la página siga funcionando igual.
 
 ---

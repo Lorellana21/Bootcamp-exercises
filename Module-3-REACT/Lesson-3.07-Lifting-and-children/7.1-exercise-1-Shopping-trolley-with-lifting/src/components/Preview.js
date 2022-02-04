@@ -2,7 +2,7 @@ import React from "react-dom";
 
 const Preview = (props) => {
 
-    // Funciones que nos ayudan a renderizar
+
     const renderPaymentTypeText = () => {
         const paymentType = props.paymentType;
 
