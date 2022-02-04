@@ -269,8 +269,6 @@ Vamos a crear el componente `InputGroupText` que tiene que recibir props y adem�
 
 5. Ahora que el `InputGroupText` ya está recibiendo todas las props que necesita, usa estas props dentro del código del retorno del componente.
 
-Nota: seguramente te saldrán muchos errores en consola hasta que termines de hacer todos los pasos de este ejercicio. Lee cada uno de ellos detenidamente, entiéndelos para poder solucionarlos.
-
 ---
 
 **Ejercicio 3. Crear el componente InputGroupText (inmaculado)**
@@ -325,11 +323,12 @@ Ahora que ya tienes el componente `InputGroupText` con un código exquisito vamo
 </div>
 ```
 
-por el componente InputGroupText
-Sustituye el código anterior por <InputGroupText />.
-Añade al código <InputGroupText /> todas las props que necesita.
-Añade también la función setEmail para poder hacer lifting.
-Refactoriza la función setEmail porque ahora esta recibe el valor del input y no el evento.
+por el componente `InputGroupText`.
+
+1. Sustituye el código anterior por `<InputGroupText />`.
+2. Añade al código `<InputGroupText />` todas las props que necesita.
+3. Añade también la función `handleEmail` para poder hacer lifting.
+4. Refactoriza la función `setEmail` porque ahora esta recibe el valor del input y no el evento.
 
 ---
 
