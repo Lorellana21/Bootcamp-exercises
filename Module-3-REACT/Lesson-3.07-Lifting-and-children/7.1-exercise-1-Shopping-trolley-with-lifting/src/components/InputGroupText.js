@@ -16,7 +16,7 @@ const InputGroupText = (props) => {
 
 
         <div className="input-group-text">
-            <label className="label-text" htmlFor={props.htmlFor}>
+            <label className="label-text" htmlFor={props.inputId}>
                 {props.labelText}
             </label>
             <input

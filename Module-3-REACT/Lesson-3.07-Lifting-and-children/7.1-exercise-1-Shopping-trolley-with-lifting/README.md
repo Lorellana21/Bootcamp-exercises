@@ -341,6 +341,7 @@ También queremos que `InputGroupSelect` sea un componente limpito, así que sol
 ---
 
 **Ejercicio 6. Crear el componente InputGroupRadio**
+
 Crea este componente y mueve el código de la tarjeta de crédito. Queremos que este componente sea reutilizable para poder utilizarlo también con las opciones de Efectivo y Contra reembolso. Y cómo no, también queremos que sea limpio, por ello sube por lifting el valor del input, no todo el evento.
 
 ---

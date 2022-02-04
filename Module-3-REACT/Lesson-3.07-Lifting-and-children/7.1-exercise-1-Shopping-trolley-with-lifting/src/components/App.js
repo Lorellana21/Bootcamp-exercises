@@ -1,4 +1,5 @@
 import { useState } from "react";
+import InputGroupRadio from "./InputGroupRadio";
 import InputGroupSelect from "./InputGroupSelect";
 import InputGroupText from "./InputGroupText";
 import Preview from "./Preview";
@@ -25,8 +26,8 @@ const App = () => {
     setRegion(value);
   };
 
-  const handlePaymentType = (ev) => {
-    setPaymentType(ev.target.value);
+  const handlePaymentType = (value) => {
+    setPaymentType(value);
   };
 
   const handleLegalTerms = (ev) => {
@@ -73,7 +74,6 @@ const App = () => {
             labelText="Escribe un nombre:"
             inputName="name"
             inputId="name"
-            htmlFor="name"
             inputPlaceholder="María García"
             inputValue={name}
             handleChange={handleName}
@@ -84,7 +84,6 @@ const App = () => {
             labelText="Escribe un email:"
             inputName="email"
             inputId="email"
-            htmlFor="email"
             inputPlaceholder="mariagarcia@gmail.com"
             inputValue={email}
             handleChange={handleEmail}
@@ -95,59 +94,48 @@ const App = () => {
             labelText="Indica tu región::"
             inputName="region"
             inputId="region"
-            htmlFor="region"
             inputPlaceholder="mariagarcia@gmail.com"
             inputValue={region}
             handleChange={handleRegion}
+            options={[
+              'España peninsular',
+              'Islas Canarias',
+              'Islas Baleares',
+              'Ceuta',
+              'Melilla',
+            ]}
           />
 
           {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="creditCard">
-              Tarjeta de crédito
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea creditCard */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="creditCard"
-              value="creditCard"
-              checked={paymentType === "creditCard"}
-              onChange={handlePaymentType}
-            />
-          </div>
+          <InputGroupRadio
+            labelText="Tarjeta de crédito"
+            inputName="paymentType"
+            inputId="creditCard"
+            inputValue="creditCard"
+            inputChecked={paymentType === 'creditCard'}
+            handleChange={handlePaymentType}
+          />
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="cash">
-              Efectivo
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea cash */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="cash"
-              value="cash"
-              checked={paymentType === "cash"}
-              onChange={handlePaymentType}
-            />
-          </div>
+          <InputGroupRadio
+            labelText="Efectivo"
+            inputName="paymentType"
+            inputId="cash"
+            inputValue="cash"
+            inputChecked={paymentType === 'cash'}
+            handleChange={handlePaymentType}
+          />
 
-          <div className="input-group-radio">
-            <label className="label-radio" htmlFor="cashOnDelivery">
-              Contra reembolso
-            </label>
-            {/* Este radio solo debe aparecer activo cuando paymentType sea cashOnDelivery */}
-            <input
-              type="radio"
-              name="paymentType"
-              id="cashOnDelivery"
-              value="cashOnDelivery"
-              checked={paymentType === "cashOnDelivery"}
-              onChange={handlePaymentType}
-            />
-          </div>
+          <InputGroupRadio
+            labelText="Contra reembolso"
+            inputName="paymentType"
+            inputId="cashOnDelivery"
+            inputValue="cashOnDelivery"
+            inputChecked={paymentType === "cashOnDelivery"}
+            handleChange={handlePaymentType}
+          />
+
 
           {/* legal terms */}
           <div className="input-group-checkbox">
@@ -186,8 +174,8 @@ const App = () => {
         <button className="button reset" onClick={handleResetButton}>
           Limpiar el formulario
         </button>
-      </form>
-    </div>
+      </form >
+    </div >
   );
 };
 

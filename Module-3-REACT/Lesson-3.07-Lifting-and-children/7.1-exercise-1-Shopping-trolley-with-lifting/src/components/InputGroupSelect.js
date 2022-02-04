@@ -2,16 +2,22 @@
 const InputGroupSelect = (props) => {
 
 
-    const handleInputChange = (ev) => {
+    const handleRegion = (ev) => {
         props.handleChange(ev.target.value);
     }
+
+    const renderOptions = () => {
+        return props.options.map((option, index) => (
+            <option key={index}>{option}</option>
+        ));
+    };
 
 
     return (
 
 
         <div className="input-group-select">
-            <label className="label-text" htmlFor={props.htmlFor}>
+            <label className="label-text" htmlFor={props.inputId}>
                 {props.labelText}
             </label>
             <select
@@ -19,13 +25,9 @@ const InputGroupSelect = (props) => {
                 name={props.inputName}
                 id={props.inputId}
                 value={props.inputValue}
-                onChange={handleInputChange}
+                onChange={handleRegion}
             >
-                <option>España peninsular</option>
-                <option>Islas Canarias</option>
-                <option>Islas Baleares</option>
-                <option>Ceuta</option>
-                <option>Melilla</option>
+                {renderOptions()}
             </select>
         </div>
 
