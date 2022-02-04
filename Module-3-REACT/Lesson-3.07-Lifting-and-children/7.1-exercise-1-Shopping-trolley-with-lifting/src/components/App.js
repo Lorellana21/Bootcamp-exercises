@@ -12,8 +12,9 @@ const App = () => {
   const [legalTerms, setLegalTerms] = useState(false);
 
   // Eventos
-  const handleName = (ev) => {//recibiendo el evento completo
-    setName(ev);
+  const handleName = (value) => {
+    //debugger;
+    setName(value);
   };
 
   const handleEmail = ev => {

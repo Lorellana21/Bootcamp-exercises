@@ -223,12 +223,14 @@ export default App;
 
 Te recomendamos usar mucho la herramienta DevTools > Components para saber qué datos le estás pasando a los nuevos componentes. También te recomendamos poner un `debugger` en las funciones `handleLoQueSea` del componente `App` para saber qué estás recibiendo por el lifting.
 
+---
+
 **Ejercicio 1. Crear el componente Preview**
 
 Esta es la pieza más sencilla, la única que solo tiene props y no tiene lifting: el preview.
 
 - Crea un componente `Preview`.
-- Mueve la etiqueta <div className="preview"> desde `App` a `Preview`.
+- Mueve la etiqueta `<div className="preview">` desde `App` a `Preview`.
 - Desde `App` debes pasar las props que `Preview` necesita.
 
 La única prop que a lo mejor te cuesta un poco saber cómo pasarla es la del método de pago. Para ello:
@@ -272,35 +274,41 @@ Nota: seguramente te saldrán muchos errores en consola hasta que termines de ha
 ---
 
 **Ejercicio 3. Crear el componente InputGroupText (inmaculado)**
-En el ejercicio anterior hemos creado el componente InputGroupText, le hemos pasado props para personalizarlo y le hemos pasado la función handleName a través de la prop handleChange.
-La web está funcionando pero no de la forma más limpia posible. Vuevle a leer el apartado de esta lección llamado Los datos tienen que viajar limpios para dejar este componente fetén.
-Lo que está pasando ahora mismo es que cuando la usuaria cambia su nombre, el componente InputGroupText hace lifting hacia arriba subiendo todo el evento. El componente App recibe en la función handleName todo el evento con demasiada información y para encontrar la info que quiere tiene que hacer ev.target.value.
+
+Lo que está pasando ahora mismo es que cuando la usuaria cambia su nombre, el componente `InputGroupText` hace lifting hacia arriba subiendo todo el evento. El componente `App` recibe en la función handleName todo el evento con demasiada información y para encontrar la info que quiere tiene que hacer `ev.target.value`.
+
 Para ser programadoras exquisitas vamos a:
-Pon un debugger en la primera línea de la función handleName de App.js:
-En la web cambia el nombre de la usuaria.
-Mira qué información está recibiendo por parámetros esta función.
-Si quieres ya puedes quitar el debugger.
-En el componente InputGroupText:
-Crea una función manejadora llamada por ejemplo handleInputChange.
-Asigna esta función manejadora al evento onChange del input.
-Dentro de la función manejadora vamos a ejecutar la función handleChange que estamos recibiendo por props.
-La función handleChange la debemos ejecutar pasando como argumento el ev.target.value.
-De esta forma desde el componente InputGroupText solo envía hacia arriba el valor del input y no todo el evento.
-En el componente App:
-Ya no estamos recibiendo por parámentro el evento entero, sino el valor del input. Por ello cambia el nombre del parámetro de ev a value.
-Guarda en el estado de React el value con la función setName.
-Vuelve a poner el debugger en la primera línea de la función handleName de App.js:
-Vuelve a mirar qué recibes por parámetro en esta función.
-¿Te acuerdas lo que recibías al inicio de este ejercicio?
-¿Te parece que la información que estás recibiendo ahora est más limpia?
+
+1. Pon un debugger en la primera línea de la función `handleName` de `App.js`:
+
+   - En la web cambia el nombre de la usuaria.
+   - Mira qué información está recibiendo por parámetros esta función.
+
+2. En el componente `InputGroupText`:
+
+   - Crea una función manejadora llamada por ejemplo `handleInputChange`.
+   - Asigna esta función manejadora al evento `onChange` del input.
+   - Dentro de la función manejadora vamos a ejecutar la función `handleChange` que estamos recibiendo por props.
+   - La función `handleChange` la debemos ejecutar pasando como argumento el `ev.target.value`.
+   - De esta forma desde el componente `InputGroupText` solo envía hacia arriba el valor del input y no todo el evento.
+
+3. En el componente `App`:
+
+   - Ya no estamos recibiendo por parámentro el evento entero, sino el valor del input. Por ello cambia el nombre del parámetro de `ev` a `value`.
+   - Guarda en el estado de React el `value` con la función `setName`.
+
+4. Vuelve a poner el `debugger` en la primera línea de la función `handleName` de `App.js`:
+   - Vuelve a mirar qué recibes por parámetro en esta función.
+   - ¿Te acuerdas lo que recibías al inicio de este ejercicio?
+   - ¿Te parece que la información que estás recibiendo ahora es más limpia?
 
 ---
 
 **Ejericio 4. Reutilizar el componente InputGroupText**
-Ahora que ya tienes el componente InputGroupText con un código exquisito vamos a reutilizarlo. Queremos sustituir en App el código
+
+Ahora que ya tienes el componente `InputGroupText` con un código exquisito vamos a reutilizarlo. Queremos sustituir en `App` el código:
 
 ```
-
 <div className="input-group-text">
   <label className="label-text" htmlFor="email">
     Escribe un email:
