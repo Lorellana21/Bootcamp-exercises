@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 import InputGroupCheck from "./InputGroupCheck";
 import InputGroupRadio from "./InputGroupRadio";
 import InputGroupSelect from "./InputGroupSelect";
@@ -36,8 +37,7 @@ const App = () => {
     setLegalTerms(checked);
   };
 
-  const handleResetButton = () => {
-
+  const handleReset = () => {
     setName("");
     setEmail("");
     setRegion("España peninsular");
@@ -46,7 +46,6 @@ const App = () => {
   };
 
   const handleForm = (ev) => {
-    ev.preventDefault();
     console.log("Enviando datos al servidor...");
   };
 
@@ -156,19 +155,25 @@ const App = () => {
           legalTerms={legalTerms}
         ></Preview>
 
-        {/* reset */}
-        {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
-        <input
-          className="button"
-          type="submit"
-          value="Enviar"
-          disabled={isValidForm() === false}
-        />
 
         {/* send */}
-        <button className="button reset" onClick={handleResetButton}>
-          Limpiar el formulario
-        </button>
+        <Button
+          inputType="submit"
+          inputValue="Enviar"
+          inputDisabled={isValidForm() === false}
+          handleClick={handleForm}
+        />
+
+
+
+        {/* reset */}
+        <Button
+          inputClass="reset"
+          inputType="reset"
+          inputValue="Limpiar el formulario"
+          handleClick={handleReset}
+        />
+
       </form >
     </div >
   );
