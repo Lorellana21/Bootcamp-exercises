@@ -241,27 +241,31 @@ La única prop que a lo mejor te cuesta un poco saber cómo pasarla es la del m�
 
 **Ejercicio 2. Crear el componente InputGroupText (guarrete)**
 
-Ahora lo vamos a complicar un poquito. Vamos a crear el componente InputGroupText que tiene que recibir props y además hacer lifting.
+Vamos a crear el componente `InputGroupText` que tiene que recibir props y además hacer lifting.
 
-- Crear el componente InputGroupText.
+- Crear el componente `InputGroupText`.
 - Pasarle los datos que necesita por props.
 - Que haga un lifting guarrete. En el siguiente ejercicio haremos que el lifting sea limpio y elegante.
 
   Para ello:
 
-1.  Crea el componente InputGroupText.
-2.  En el código de App hay dos etiquetas <div className="input-group-text">. Mueve la primera, la que recubre el input y el label del nombre al componente InputGroupText.
-3.  El código que acabas de mover está "acoplado" al nombre de la usuaria porque contiene cosas como "Escribe un nombre", es decir, no es un componente reutilizable. Vamos a hacerlo reutilizable. Para ello pásale desde App a InputGroupText todas las props que necesita para convertirse en un componente genérico. Estas props son:
-    - labelText: el texto que va dentro del label.
-    - inputName: el atributo name del input.
-    - inputId: el atributo id del input y el for del label.
-    - inputPlaceholder: el atributo placeholder del input.
-    - inputValue: el valor del input.
-4.  El componente InputGroupText también necesita la función para hacer lifting. Pásale desde App a InputGroupText la prop:
+1.  Crea el componente `InputGroupText`.
 
-- handleChange: cuyo valor debe ser la función handleName.
+2.  En el código de `App` hay dos etiquetas `<div className="input-group-text">`. Mueve la primera, la que recubre el input y el label del nombre al componente `InputGroupText`.
 
-5. Ahora que el InputGroupText ya está recibiendo todas las props que necesita, usa estas props dentro del código del retorno del componente.
+3.  El código que acabas de mover está "acoplado" al nombre de la usuaria porque contiene cosas como "Escribe un nombre", es decir, no es un componente reutilizable. Vamos a hacerlo reutilizable. Para ello pásale desde `App` a `InputGroupText` todas las props que necesita para convertirse en un componente genérico. Estas props son:
+
+    - `labelText`: el texto que va dentro del label.
+    - `inputName`: el atributo `name` del input.
+    - `inputId`: el atributo `id` del input y el `for` del label.
+    - `inputPlaceholder`: el atributo `placeholder` del input.
+    - `inputValue`: el valor del input.
+
+4.  El componente `InputGroupText` también necesita la función para hacer lifting. Pásale desde `App` a `InputGroupText` la prop:
+
+- `handleChange`: cuyo valor debe ser la función `handleName`.
+
+5. Ahora que el `InputGroupText` ya está recibiendo todas las props que necesita, usa estas props dentro del código del retorno del componente.
 
 Nota: seguramente te saldrán muchos errores en consola hasta que termines de hacer todos los pasos de este ejercicio. Lee cada uno de ellos detenidamente, entiéndelos para poder solucionarlos.
 

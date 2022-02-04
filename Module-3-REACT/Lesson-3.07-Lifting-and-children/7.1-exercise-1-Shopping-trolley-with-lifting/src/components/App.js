@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import InputGroupText from './InputGroupText';
 import Preview from './Preview';
 
 const App = () => {
@@ -11,8 +12,8 @@ const App = () => {
   const [legalTerms, setLegalTerms] = useState(false);
 
   // Eventos
-  const handleName = ev => {
-    setName(ev.target.value);
+  const handleName = (ev) => {//recibiendo el evento completo
+    setName(ev);
   };
 
   const handleEmail = ev => {
@@ -65,20 +66,16 @@ const App = () => {
         <div className="form">
 
           {/* name */}
-          <div className="input-group-text">
-            <label className="label-text" htmlFor="name">
-              Escribe un nombre:
-            </label>
-            <input
-              className="input-text"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="María García"
-              value={name}
-              onChange={handleName}
-            />
-          </div>
+          <InputGroupText
+            labelText="Escribe un nombre:"
+            inputName="name"
+            inputId="name"
+            htmlFor="name"
+            inputPlaceholder="María García"
+            inputValue={name}
+            handleChange={handleName}
+          />
+
 
           {/* email */}
           <div className="input-group-text">
@@ -190,8 +187,8 @@ const App = () => {
         <button className="button reset" onClick={handleResetButton}>
           Limpiar el formulario
         </button>
-      </form>
-    </div>
+      </form >
+    </div >
   );
 };
 
