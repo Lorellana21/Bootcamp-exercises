@@ -333,10 +333,10 @@ por el componente `InputGroupText`.
 ---
 
 **Ejericio 5. Crear el componente InputGroupSelect**
-Nota: este y los siguientes ejercicios son más de lo mismo, mover código desde App a nuevos componentes, pasarles props y hacer lifting. En React todo es sota, caballo y rey, siempre lo mismo.
-Si quieres deja estos ejercicios para otro día.
-En este nuevo ejercicio lo que queremos es crear el componente InputGroupSelect y mover el selector de región desde App a este nuevo componente.
-También queremos que InputGroupSelect sea un componente limpito, así que solo debe enviar hacia arriba por lifting el valor del select, por lo que también hay que cambiar mínimamente la función handleRegion de App.
+
+Crear el componente `InputGroupSelect` y mover el selector de región desde `App` a este nuevo componente.
+
+También queremos que `InputGroupSelect` sea un componente limpito, así que solo debe enviar hacia arriba por lifting el valor del select, por lo que también hay que cambiar mínimamente la función `handleRegion` de `App`.
 
 ---
 

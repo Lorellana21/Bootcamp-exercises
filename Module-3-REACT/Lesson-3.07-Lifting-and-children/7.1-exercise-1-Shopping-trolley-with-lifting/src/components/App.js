@@ -1,14 +1,14 @@
-
-import { useState } from 'react';
-import InputGroupText from './InputGroupText';
-import Preview from './Preview';
+import { useState } from "react";
+import InputGroupSelect from "./InputGroupSelect";
+import InputGroupText from "./InputGroupText";
+import Preview from "./Preview";
 
 const App = () => {
   // Estados del componente
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [region, setRegion] = useState('España peninsular'); // Iniciamos el componente con la primera opción del select
-  const [paymentType, setPaymentType] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [region, setRegion] = useState("España peninsular"); // Iniciamos el componente con la primera opción del select
+  const [paymentType, setPaymentType] = useState("");
   const [legalTerms, setLegalTerms] = useState(false);
 
   // Eventos
@@ -17,43 +17,46 @@ const App = () => {
     setName(value);
   };
 
-  const handleEmail = value => {
+  const handleEmail = (value) => {
     setEmail(value);
   };
 
-  const handleRegion = ev => {
-    setRegion(ev.target.value);
+  const handleRegion = (value) => {
+    setRegion(value);
   };
 
-  const handlePaymentType = ev => {
+  const handlePaymentType = (ev) => {
     setPaymentType(ev.target.value);
   };
 
-  const handleLegalTerms = ev => {
+  const handleLegalTerms = (ev) => {
     // Como lo que nos interesa es si está activo o no guardamos el checked
     setLegalTerms(ev.target.checked);
   };
 
   const handleResetButton = () => {
     // Ponemos los mismo valores que hemos usado arriba en los useState
-    setName('');
-    setEmail('');
-    setRegion('España peninsular');
-    setPaymentType('');
+    setName("");
+    setEmail("");
+    setRegion("España peninsular");
+    setPaymentType("");
     setLegalTerms(false);
   };
 
-  const handleForm = ev => {
+  const handleForm = (ev) => {
     ev.preventDefault();
-    console.log('Enviando datos al servidor...');
+    console.log("Enviando datos al servidor...");
   };
-
-
 
   const isValidForm = () => {
     // El formulario solo es válido cuando los inputs de tipo texto no estén vacíos, cuando se haya marcado una tipo de pago y cuando los términos legales sean true
     // También podríamos comprobar que el email tiene el formato correcto, pero no queremos complicar este ejemplo
-    if (name !== '' && email !== '' && paymentType !== '' && legalTerms === true) {
+    if (
+      name !== "" &&
+      email !== "" &&
+      paymentType !== "" &&
+      legalTerms === true
+    ) {
       return true;
     } else {
       return false;
@@ -65,7 +68,6 @@ const App = () => {
       <form className="form" onSubmit={handleForm}>
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
-
           {/* name */}
           <InputGroupText
             labelText="Escribe un nombre:"
@@ -76,7 +78,6 @@ const App = () => {
             inputValue={name}
             handleChange={handleName}
           />
-
 
           {/* email */}
           <InputGroupText
@@ -90,24 +91,15 @@ const App = () => {
           />
 
           {/* region */}
-          <div className="input-group-select">
-            <label className="label-text" htmlFor="region">
-              Indica tu región:
-            </label>
-            <select
-              className="input-select"
-              name="region"
-              id="region"
-              value={region}
-              onChange={handleRegion}
-            >
-              <option>España peninsular</option>
-              <option>Islas Canarias</option>
-              <option>Islas Baleares</option>
-              <option>Ceuta</option>
-              <option>Melilla</option>
-            </select>
-          </div>
+          <InputGroupSelect
+            labelText="Indica tu región::"
+            inputName="region"
+            inputId="region"
+            htmlFor="region"
+            inputPlaceholder="mariagarcia@gmail.com"
+            inputValue={region}
+            handleChange={handleRegion}
+          />
 
           {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>
@@ -122,7 +114,7 @@ const App = () => {
               name="paymentType"
               id="creditCard"
               value="creditCard"
-              checked={paymentType === 'creditCard'}
+              checked={paymentType === "creditCard"}
               onChange={handlePaymentType}
             />
           </div>
@@ -137,7 +129,7 @@ const App = () => {
               name="paymentType"
               id="cash"
               value="cash"
-              checked={paymentType === 'cash'}
+              checked={paymentType === "cash"}
               onChange={handlePaymentType}
             />
           </div>
@@ -152,7 +144,7 @@ const App = () => {
               name="paymentType"
               id="cashOnDelivery"
               value="cashOnDelivery"
-              checked={paymentType === 'cashOnDelivery'}
+              checked={paymentType === "cashOnDelivery"}
               onChange={handlePaymentType}
             />
           </div>
@@ -173,18 +165,29 @@ const App = () => {
           </div>
         </div>
 
-        <Preview name={name} email={email} region={region} paymentType={paymentType} legalTerms={legalTerms}></Preview>
+        <Preview
+          name={name}
+          email={email}
+          region={region}
+          paymentType={paymentType}
+          legalTerms={legalTerms}
+        ></Preview>
 
         {/* reset */}
         {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
-        <input className="button" type="submit" value="Enviar" disabled={isValidForm() === false} />
+        <input
+          className="button"
+          type="submit"
+          value="Enviar"
+          disabled={isValidForm() === false}
+        />
 
         {/* send */}
         <button className="button reset" onClick={handleResetButton}>
           Limpiar el formulario
         </button>
-      </form >
-    </div >
+      </form>
+    </div>
   );
 };
 
