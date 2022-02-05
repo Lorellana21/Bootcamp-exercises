@@ -6,17 +6,25 @@
   
   body {
     font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
   }
-  .list{
-    width: 600px;
-    height: auto;
+  
+  .list{    
+    min-width: 300px;
     border: 2px solid black;
-    margin-left: 20px;
     list-style: none;
   }
-  li{
-    border: 2px solid black;
+  .title{
+    text-decoration: underline;
   }
+  .img{
+    width: 200px;
+    height: 200px;
+  }
+  
   .lightBlue{
 background-color: aqua;
   }
