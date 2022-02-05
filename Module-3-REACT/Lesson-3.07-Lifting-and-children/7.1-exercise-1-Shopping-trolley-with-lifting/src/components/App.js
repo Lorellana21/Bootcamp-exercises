@@ -10,7 +10,7 @@ const App = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [region, setRegion] = useState("España peninsular"); // Iniciamos el componente con la primera opción del select
+  const [region, setRegion] = useState("España peninsular");
   const [paymentType, setPaymentType] = useState("");
   const [legalTerms, setLegalTerms] = useState(false);
 
