@@ -79,7 +79,7 @@ const App = () => {
             handleChange={handleName}
           />
 
-
+          {/* email */}
           <InputGroupText
             labelText="Escribe un email:"
             inputName="email"
@@ -89,7 +89,7 @@ const App = () => {
             handleChange={handleEmail}
           />
 
-
+          {/* region */}
           <InputGroupSelect
             labelText="Indica tu región::"
             inputName="region"
@@ -106,7 +106,7 @@ const App = () => {
             ]}
           />
 
-
+          {/* payment type */}
           <label className="label-text">Indica tu método de pago:</label>
 
           <InputGroupRadio
@@ -136,7 +136,7 @@ const App = () => {
             handleChange={handlePaymentType}
           />
 
-
+          {/* legal terms */}
           <InputGroupCheck
             labelText="Debes aceptar nuestros términos legales para completar la compra:"
             inputName="legalTerms"
@@ -156,7 +156,7 @@ const App = () => {
         ></Preview>
 
 
-
+        {/* send */}
         <Button
           inputType="submit"
           inputValue="Enviar"
@@ -165,6 +165,8 @@ const App = () => {
         />
 
 
+
+        {/* reset */}
         <Button
           inputClass="reset"
           inputType="reset"
