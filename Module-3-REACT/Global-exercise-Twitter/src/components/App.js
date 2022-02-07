@@ -1,9 +1,16 @@
 import { useEffect, useState } from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 // components
 import ComposeModal from './ComposeModal';
 import Header from './Header';
-import MainHeader from './MainHeader';
-import Tweet from './Tweet';
+import Profile from './Profile';
+import Tweets from './Tweets';
+import Search from './Search';
+import Home from './Home';
 // services
 import getTweets from '../services/api';
 import ls from '../services/local-storage';
@@ -56,11 +63,7 @@ function App() {
 
   // render helpers
 
-  const renderTweets = () => {
-    return tweets.map(tweet => {
-      return <Tweet key={tweet.id} tweet={tweet} />;
-    });
-  };
+
 
   const renderComposeModal = () => {
     if (composeIsOpen === true) {
@@ -76,15 +79,32 @@ function App() {
   };
 
   return (
+
     <div className="page">
       <Header handleToggleCompose={handleToggleCompose} />
       <main className="main">
-        <MainHeader />
-        <ul>{renderTweets()}</ul>
+        <Routes>
+          <Route path="/" exact
+            element={<Home />} />
+          {/* <Tweets tweets={tweets} /> */}
+
+          <Route path="/search" element={<Search />} />
+
+          {/* <Tweets tweets={tweets} /> */}
+
+          <Route path="/profile" element={<Profile />} />
+
+          <Tweets tweets={tweets} />
+
+        </Routes>
         {renderComposeModal()}
       </main>
-    </div>
+    </div >
+
   );
 }
 
 export default App;
+
+
+
