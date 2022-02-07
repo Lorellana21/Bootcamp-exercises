@@ -1,4 +1,4 @@
-import '../styles/layout/HeaderMenuItem.scss';
+import '../styles/components/HeaderMenuItem.scss';
 
 const HeaderMenuItem = props => {
     return (

@@ -1,4 +1,9 @@
+@import "../core/variables.scss";
+
 .main__header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $border;
+
     .header {
         &__title {
             display: flex;
@@ -73,7 +78,7 @@
         }
 
         &__acount-username {
-            font-size: 0.9375rem;
+            font-size: $size-main-text;
             color: #536471;
         }
 
@@ -88,12 +93,12 @@
         &__account-description {
             margin-bottom: 1rem;
             font-weight: normal;
-            font-size: 0.9375rem;
+            font-size: $size-main-text;
         }
 
         &__account-data {
             margin-bottom: 1rem;
-            font-size: 0.9375rem;
+            font-size: $size-main-text;
             color: #536471;
         }
 
@@ -119,8 +124,12 @@
         }
 
         &__followers-info {
-            color: #536471;
-            font-size: 0.9375rem;
+            color: $color-text-secondary;
+            font-size: $size-main-text;
+        }
+
+        &__following {
+            padding-right: 0.5rem;
         }
 
         &__followers-number {
