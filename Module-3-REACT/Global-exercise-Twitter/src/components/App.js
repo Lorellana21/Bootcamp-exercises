@@ -9,6 +9,7 @@ import ComposeModal from './ComposeModal';
 import Header from './Header';
 import Profile from './Profile';
 import Tweets from './Tweets';
+import TweetDetail from './TweetDetail';
 import Search from './Search';
 import Home from './Home';
 // services
@@ -78,6 +79,18 @@ function App() {
     }
   };
 
+  const routeTweetData = useRouteMatch('/tweet/:tweetId');
+
+  const getRouteTweet = () => {
+    if (routeTweetData) {
+      const routeTweetId = routeTweetData.params.tweetId;
+      const routeTweet = tweets.find(tweet => {
+        return tweet.id === routeTweetId;
+      });
+      return routeTweet || {};
+    }
+  };
+
   return (
 
     <div className="page">
@@ -94,7 +107,8 @@ function App() {
 
           <Route path="/profile" element={<Profile />} />
 
-          <Tweets tweets={tweets} />
+          {/* <Tweets tweets={tweets} /> */}
+          <Route path="/tweet/:tweetId" element={<TweetDetail tweet={getRouteTweet()} />} />
 
         </Routes>
         {renderComposeModal()}
