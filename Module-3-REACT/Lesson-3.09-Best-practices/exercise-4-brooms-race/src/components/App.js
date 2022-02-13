@@ -1,4 +1,4 @@
-import "../stylesheets/App.css";
+
 import React from "react";
 
 class App extends React.Component {
@@ -22,5 +22,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-// Partiendo del array con los resultados de una carrera de escobas ya ordenados, vamos a sacar del array e imprimir en la consola el podium, es decir, los nombres y tiempos del primero, segundo y tercer clasificado usando destructuring del array.
