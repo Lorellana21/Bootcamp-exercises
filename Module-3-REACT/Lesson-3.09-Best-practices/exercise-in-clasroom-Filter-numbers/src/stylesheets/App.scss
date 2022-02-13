@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+    .controls {
+        box-sizing: border-box;
+        width: 35%;
+    }
+
+    .results {
+        box-sizing: border-box;
+        width: 65%;
+    }
+}
+
+.controls__filter {
+    display: block;
+    margin-top: 0.5em;
+    margin-left: 2em;
+}
