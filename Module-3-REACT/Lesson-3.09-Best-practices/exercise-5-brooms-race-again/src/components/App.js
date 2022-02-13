@@ -1,4 +1,5 @@
-import "../stylesheets/App.css";
+
+
 import React from "react";
 
 class App extends React.Component {
@@ -30,5 +31,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-// Revisa el ejercicio 4 para acceder al nombre y tiempo de los ganadores usando destructuring de array y de objeto para imprimirlos en la consola.
