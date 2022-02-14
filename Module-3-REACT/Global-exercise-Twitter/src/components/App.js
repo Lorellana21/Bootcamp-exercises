@@ -1,20 +1,19 @@
 import { useEffect, useState } from 'react';
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
 // components
 import ComposeModal from './ComposeModal';
 import Header from './Header';
+import Home from './Home';
+import Loader from './Loader';
 import Profile from './Profile';
+import Search from './Search';
 import Tweets from './Tweets';
 import TweetDetail from './TweetDetail';
-import Search from './Search';
-import Home from './Home';
 // services
-import getTweets from '../services/api';
+import api from '../services/api';
 import ls from '../services/local-storage';
+import date from '../services/date';
 // styles
 import '../styles/layout/App.scss';
 
@@ -23,11 +22,22 @@ function App() {
   const [composeIsOpen, setComposeIsOpen] = useState(false);
   const [composeText, setComposeText] = useState(ls.get('composeText', ''));
   const [tweets, setTweets] = useState([]);
+  const [profile, setProfile] = useState({});
+  const [showLoading, setShowLoading] = useState(false);
+  const [searchText, setSearchText] = useState('');
 
   // effects
   useEffect(() => {
-    getTweets().then(data => {
+    setShowLoading(true);
+    api.getTweets().then(data => {
+      setShowLoading(false);
       setTweets(data);
+    });
+  }, []);
+
+  useEffect(() => {
+    api.getProfile().then(data => {
+      setProfile(data);
     });
   }, []);
 
@@ -46,12 +56,11 @@ function App() {
 
   const handleComposeSubmit = ev => {
     tweets.unshift({
-      id: '1243sdf',
-      avatar:
-        '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/twitter-v1/images/user-me.jpg',
-      user: 'Adalab',
-      username: 'adalab_digital',
-      date: '8 sep. 2021',
+      id: uuid(),
+      avatar: profile.avatar,
+      user: profile.user,
+      username: profile.username,
+      date: date.getCurrentDate(),
       text: composeText,
       comments: 0,
       retweets: 0,
@@ -62,10 +71,11 @@ function App() {
     setComposeText('');
   };
 
+  const handleSearchText = searchText => {
+    setSearchText(searchText);
+  };
+
   // render helpers
-
-
-
   const renderComposeModal = () => {
     if (composeIsOpen === true) {
       return (
@@ -79,46 +89,55 @@ function App() {
     }
   };
 
+  const getFilteredTweets = () => {
+    return tweets.filter(tweet => {
+      return (
+        tweet.text.toLowerCase().includes(searchText.toLowerCase()) ||
+        tweet.user.toLowerCase().includes(searchText.toLowerCase())
+      );
+    });
+  };
+
+  // get route tweet id
   const routeTweetData = useRouteMatch('/tweet/:tweetId');
 
   const getRouteTweet = () => {
     if (routeTweetData) {
       const routeTweetId = routeTweetData.params.tweetId;
-      const routeTweet = tweets.find(tweet => {
+      return tweets.find(tweet => {
         return tweet.id === routeTweetId;
       });
-      return routeTweet || {};
     }
   };
 
   return (
-
     <div className="page">
       <Header handleToggleCompose={handleToggleCompose} />
       <main className="main">
-        <Routes>
-          <Route path="/" exact
-            element={<Home />} />
-          {/* <Tweets tweets={tweets} /> */}
-
-          <Route path="/search" element={<Search />} />
-
-          {/* <Tweets tweets={tweets} /> */}
-
-          <Route path="/profile" element={<Profile />} />
-
-          {/* <Tweets tweets={tweets} /> */}
-          <Route path="/tweet/:tweetId" element={<TweetDetail tweet={getRouteTweet()} />} />
-
-        </Routes>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+            <Tweets tweets={tweets} />
+          </Route>
+          <Route path="/search">
+            <Search searchText={searchText} handleSearchText={handleSearchText} />
+            <Tweets tweets={getFilteredTweets()} />
+          </Route>
+          <Route path="/profile">
+            <Profile profile={profile} />
+            <Tweets tweets={tweets} />
+          </Route>
+          <Route path="/tweet/:tweetId">
+            <TweetDetail tweet={getRouteTweet()} />
+          </Route>
+        </Switch>
         {renderComposeModal()}
       </main>
-    </div >
-
+      <Loader showLoading={showLoading} />
+    </div>
   );
 }
 
 export default App;
-
 
 

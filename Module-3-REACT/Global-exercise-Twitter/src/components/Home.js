@@ -1,4 +1,5 @@
 import '../styles/components/Home.scss';
+import Tweets from './Tweets';
 
 const Home = () => {
     return (
@@ -6,6 +7,7 @@ const Home = () => {
             <header>
                 <h1 className="header__title">Inicio</h1>
             </header>
+            <Tweets></Tweets>
         </section>
     );
 };
