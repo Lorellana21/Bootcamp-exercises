@@ -30,3 +30,5 @@ A continuación queremos probar que el componente `MenuLink` renderiza un link c
 3. En la parte de actuación busca la etiqueta HTML que tenga el texto "Contacto".
 
 4. En la parte de aserción obtén el valor del atributo `target` y comprueba con un `expect` y el matcher .toBe() que es un string vacío. También puedes utilizar el matcher .[toBeFalsy()](https://jestjs.io/es-ES/docs/expect#tobefalsy).
+
+
