@@ -17,3 +17,12 @@ Vamos a poder filtrar por:
 El listado de ciudades lo vamos a generar a partir de las ciudades de las personas que devuelva el API.
 
 El resultado debe ser parecido a este diseño de LinkedIn:
+
+![image](https://user-images.githubusercontent.com/81922944/154505266-197a57df-cc6c-4213-b81b-bc4952157a64.png)
+
+
+---
+## Resumen del módulo
+
+![image](https://user-images.githubusercontent.com/81922944/154505230-c9baa6aa-2efc-4edd-9369-7b002e0b9991.png)
+
