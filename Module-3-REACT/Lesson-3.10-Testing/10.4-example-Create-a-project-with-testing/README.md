@@ -15,10 +15,11 @@ Con estos pasos ya tenemos creado nuestro primer test. Para ejecutar los tests e
 
 Si todo ha ido bien en la terminal te mostrará algo como:
 
-[](https://774018087-files.gitbook.io/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-MdR67vc7P9nPSm8gsCY%2Fsync%2Fc97d6e459ce89db8fac929d57ba1da2b938ee9d5.png?generation=1632931721579149&alt=media)
+![](https://774018087-files.gitbook.io/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-MdR67vc7P9nPSm8gsCY%2Fsync%2Fc97d6e459ce89db8fac929d57ba1da2b938ee9d5.png?generation=1632931721579149&alt=media)
+
 
 Y si algo ha fallado verás algo como:
 
-[](https://774018087-files.gitbook.io/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-MdR67vc7P9nPSm8gsCY%2Fsync%2Ff7ed31e0b045c2484a7188565e1022077e248c11.png?generation=1632931721627756&alt=media)
+![image](https://user-images.githubusercontent.com/81922944/154468910-0dd8a3bf-66dd-4dce-b2da-831f48d86ba7.png)
 
 Por cierto en los ficheros de tests podemos poner los console.log() que queramos para saber por qué un test está fallando.
