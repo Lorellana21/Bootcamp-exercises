@@ -20,6 +20,10 @@ El resultado debe ser parecido a este diseño de LinkedIn:
 
 ![image](https://user-images.githubusercontent.com/81922944/154505266-197a57df-cc6c-4213-b81b-bc4952157a64.png)
 
+Diagrama de flujo:
+
+![image](https://user-images.githubusercontent.com/81922944/154508644-037580b1-b230-4258-90a1-b9ff53f1b2a5.png)
+
 ---
 
 ## Resumen del módulo
