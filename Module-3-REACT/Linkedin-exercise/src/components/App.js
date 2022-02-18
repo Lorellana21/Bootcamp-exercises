@@ -1,73 +1,95 @@
-import React from 'react';
-import getDataFromApi from '../services/api';
+import React, { useEffect, useState } from 'react';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+import Filters from './Filters';
+import UserList from './UserList';
+import UserDetail from './UserDetail';
+import getDataFromApi from '../services/getDataFromApi';
+import { Routes, Route } from "react-router-dom";
 
-    this.state = {
-      series: [],
-      filterText: '',
-      filterLanguage: '',
-      isLoading: true
-    };
+const App = () => {
+  const [users, setUsers] = useState([]);
+  const [nameFilter, setNameFilter] = useState('');
+  const [genderFilter, setGenderFilter] = useState('all');
+  const [citiesFilter, setCitiesFilter] = useState([]);
+  useEffect(() => {
+    getDataFromApi().then(data => setUsers(data));
+  }, []);
 
-    getDataFromApi().then(data => {
-      console.log(data);
-      this.setState({
-        series: data,
-        isLoading: false
-      });
+  // event handlers
+
+  const handleFilter = data => {
+    console.log(data);
+    if (data.key === 'name') {
+      setNameFilter(data.value);
+    } else if (data.key === 'gender') {
+      setGenderFilter(data.value);
+    } else if (data.key === 'location') {
+      if (data.checked === true) {
+        const newCitiesFilter = [...citiesFilter];
+        newCitiesFilter.push(data.value);
+        setCitiesFilter(newCitiesFilter);
+      } else {
+        const newCitiesFilter = citiesFilter.filter(city => {
+          return city !== data.value;
+        });
+        setCitiesFilter(newCitiesFilter);
+        // const newCitiesFilter = [...citiesFilter];
+        // const cityIndex = newCitiesFilter.indexOf(data.value);
+        // newCitiesFilter.splice(cityIndex, 1);
+        // setCitiesFilter(newCitiesFilter);
+      }
+    }
+  };
+
+  // render
+
+  const filteredUsers = users
+    .filter(user => {
+      return user.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter(user => {
+      if (genderFilter === 'all') {
+        return true;
+      } else {
+        return user.gender === genderFilter;
+      }
+      // return genderFilter === 'all' ? true : user.gender === genderFilter;
+    })
+    .filter(user => {
+      if (citiesFilter.length === 0) {
+        return true;
+      } else {
+        return citiesFilter.includes(user.city);
+      }
+      // return citiesFilter.length === 0 ? true : citiesFilter.includes(user.city);
     });
 
-    this.handleFilterText = this.handleFilterText.bind(this);
-    this.handleFilterLanguage = this.handleFilterLanguage.bind(this);
-  }
-
-  handleFilterText(ev) {
-    this.setState({
-      filterText: ev.target.value
+  const renderUserDetail = props => {
+    const userId = props.match.params.userId;
+    const foundUser = users.find(user => {
+      return user.id === userId;
     });
-  }
+    if (foundUser !== undefined) {
+      return <UserDetail user={foundUser} />;
+    }
+  };
 
-  handleFilterLanguage(ev) {
-    this.setState({
-      filterLanguage: ev.target.value
-    });
-  }
-
-  renderSeriesList() {
-    // si quieres ver este método como si fuera un poema abre AppPoem.js
-    return this.state.series
-      .filter(serie => {
-        return serie.show.name.toLowerCase().includes(this.state.filterText.toLowerCase());
-      })
-      .filter(serie => {
-        return serie.show.language.toLowerCase().includes(this.state.filterLanguage.toLowerCase());
-      })
-      .map(serie => {
-        return <li key={serie.show.id}>Nombre: {serie.show.name}</li>;
-      });
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Fetch</h1>
-        <p>{this.state.isLoading ? 'Cargando..' : ''}</p>
-
-        <p>
-          Explicación: estamos llamando al API por la serie "friends" ya que esta devuelve series en
-          English, Japanese, Korean... y así sí podemos filtrar por idioma.
-        </p>
-
-        <input type="text" onChange={this.handleFilterText} placeholder="filter by name" />
-        <input type="text" onChange={this.handleFilterLanguage} placeholder="filter by language" />
-
-        <ul>{this.renderSeriesList()}</ul>
+  const getCities = () => {
+    return users.map(user => user.city);
+  };
+  console.log(citiesFilter);
+  return (
+    <>
+      <h1 className="title--big">Directorio de personas</h1>
+      <div className="col2">
+        <Filters cities={getCities()} handleFilter={handleFilter} />
+        <UserList users={filteredUsers} />
+        <Routes>
+          <Route path="/user/:userId" element={renderUserDetail} />
+        </Routes>
       </div>
-    );
-  }
-}
+    </>
+  );
+};
 
 export default App;
