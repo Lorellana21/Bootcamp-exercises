@@ -1,6 +1,7 @@
 
 
-import MenuItem from './MenuItem';
+import MenuItem from "./MenuItem";
+
 
 const App = () => {
   return (
