@@ -33,8 +33,8 @@ const App = () => {
   };
 
   const handleLegalTerms = (checked) => {
-
     setLegalTerms(checked);
+    
   };
 
   const handleReset = () => {
@@ -69,7 +69,7 @@ const App = () => {
         <h2>Rellena tus datos para finalizar la compra:</h2>
         <div className="form">
 
-          {/* name */}
+        
           <InputGroupText
             labelText="Escribe un nombre:"
             inputName="name"
