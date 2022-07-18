@@ -8,7 +8,7 @@ const App = () => {
       <h1>Practicando con tooltips y children</h1>
 
       <p>
-        Blanditiis illo facilis incidunt numquam laborum, dolore quod consequuntur aliquam a!
+        Blanditiis illo fantur aliquam a!
       </p>
       <Tooltip>
         <h4>Este es el título de la ayuda</h4>
